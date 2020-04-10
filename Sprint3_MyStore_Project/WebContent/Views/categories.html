@@ -22,6 +22,18 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+	
+<script>
+	$(document).ready(function() {
+		$(".card").click(function() {
+			var category = $(this).find("h5").html();
+			alert(category);
+		});
+		$(".card").hover(function() {
+			$(this).css("cursor", "pointer");
+		});
+	});
+</script>
 
 </head>
 <body>
@@ -68,14 +80,14 @@
 		<div class="card text-center">
 			<img src="../Image/pet-food1.jpg" class="card-img-top" alt="...">
 			<div class="card-body">
-				<a href="#!"><h5 class="card-title">Food</h5></a>
+				<h5 class="card-title">Food</h5>
 				<p class="card-text">Om nom nom.</p>
 			</div>
 		</div>
 		<div class="card text-center">
 			<img src="../Image/toys.jpg" class="card-img-top" alt="...">
 			<div class="card-body">
-				<a href="#!"><h5 class="card-title">Toys</h5></a>
+				<h5 class="card-title">Toys</h5>
 				<p class="card-text">Fun times.</p>
 			</div>
 		</div>
@@ -83,21 +95,21 @@
 			<img src="../Image/Pet-Furniture-2.jpg" class="card-img-top"
 				alt="...">
 			<div class="card-body">
-				<a href="#!"><h5 class="card-title">Beds & Furniture</h5></a>
+				<h5 class="card-title">Beds & Furniture</h5>
 				<p class="card-text">Look at that comfy dog.</p>
 			</div>
 		</div>
 		<div class="card text-center">
 			<img src="../Image/groomingstuff.jpg" class="card-img-top" alt="...">
 			<div class="card-body">
-				<a href="#!"><h5 class="card-title">Grooming</h5></a>
+				<h5 class="card-title">Grooming</h5>
 				<p class="card-text">Nobody wants an ugly pet.</p>
 			</div>
 		</div>
 		<div class="card text-center">
 			<img src="../Image/catcostume.jpg" class="card-img-top" alt="...">
 			<div class="card-body">
-				<a href="#!"><h5 class="card-title">Apparel</h5></a>
+				<h5 class="card-title">Apparel</h5>
 				<p class="card-text">Yarrr!</p>
 			</div>
 		</div>
