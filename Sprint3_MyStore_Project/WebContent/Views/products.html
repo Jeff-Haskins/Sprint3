@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="../Style/home.css" rel="stylesheet" type="text/css" />
+<link href="../Style/product.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -22,8 +22,65 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+
 </head>
 <body>
+
+	<!-- Nav bar for search bar, my account button, and shopping cart button -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	
+		<a class="navbar-brand" href="#">
+		<img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
+		
+		<!-- Search Bar Form -->
+		<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search"
+					placeholder="Search" aria-label="Search">
+				<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+		</form>
+		
+		<!-- MyAccount button that will redirect to the My Account page -->
+		<a id="myaccount" href="myAccount.html">
+		<button class="btn btn-primary my-2 my-sm-0" type="button">MyAccount</button>
+		</a>
+		
+		<!-- MyCart button to see what is in your cart -->
+		<a id="cart" href="myCart.html">
+			<input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
+		</a>
+ 
+	</nav>
+
+<!-- Nav tag for second level selections for categories and home button -->
+	<nav id="NavFilter" class="navbar navbar-expand-lg navbar-light bg-light">
+
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li id="home" class="nav-item active"><a class="nav-link" href="home.html">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				
+				<!-- Products button that will redirect to the products page -->
+				<li id="product" class="nav-item active">
+					<a class="nav-link" href="products.html">Products</a>
+				</li>
+<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
+				<li id="filter" class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle btn btn-success" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Filter </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Food</a> <a
+							class="dropdown-item" href="#">Toys</a>
+<!-- 						<div class="dropdown-divider"></div> -->
+						<a class="dropdown-item" href="#">Beds & Grooming</a>
+						<a class="dropdown-item" href="#">Grooming</a>
+						<a class="dropdown-item" href="#">Apparel</a>
+					</div></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="row row-cols-1 row-cols-md-3">
 		<div class="col mb-4">
 			<div class="card h-100">
