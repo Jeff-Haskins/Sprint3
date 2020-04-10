@@ -1,7 +1,31 @@
 @charset "ISO-8859-1";
+
+#myaccount{
+	
+	position: absolute;
+  	right: 0px;
+  	width: 300px;
+  	padding: 10px;
+	
+}
+
+#cart{
+	position: absolute;
+  	right: 0px;
+  	width: 150px;
+  	padding: 10px;
+}
+
 .collapse-content .fa.fa-heart:hover {
   color: #f44336 !important;
 }
 .collapse-content .fa.fa-share-alt:hover {
   color: #0d47a1 !important;
+}
+
+#filter{
+	position: absolute;
+  	right: 0px;
+  	width: 150px;
+  	padding: 10px;
 }
