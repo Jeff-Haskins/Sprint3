@@ -8,174 +8,91 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-<script>
-	$(document).ready(function() {
-		$(".btn-success").click(function() {
-			<!-- Define product objects -->
-			var item1 = {
-				name:"Dog",
-				price:"29.95",
-				qty:"7"
-			};
-			var item2 = {
-				name:"Cat",
-				price:"19.95",
-				qty:"23"
-			};
-			
-			<!-- Initialize array and append products -->
-			var cart = [];
-			cart.push(item1);
-			cart.push(item2);
-			
-			<!-- Convert array to string and save to sessionStorage -->
-			var cartString = JSON.stringify(cart);
-			sessionStorage.setItem("cart", cartString);
-			
-			<!-- Displaying data just to see result -->
-			alert(cartString);
-			
-			<!-- Read cart from sessionStorage and convert back into a js object -->
-			var cart2 = JSON.parse(sessionStorage.getItem("cart"));
-			
-			<!-- Pull some data from the parsed cart to make sure it's working -->
-			alert(cart2[0].name);
-		});
-	});
-</script>
-
+<script src="../Javascript/cart.js"></script>
 </head>
 <body>
 
-<!-- Nav bar for search bar, my account button, and shopping cart button -->
+	<!-- Nav bar for search bar, my account button, and shopping cart button -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	
-		<a class="navbar-brand" href="home.html">
-		<img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
-		
+
+		<a class="navbar-brand" href="home.html"> <img
+			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
+
 		<!-- Search Bar Form -->
 		<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+			<input class="form-control mr-sm-2" type="search"
+				placeholder="Search" aria-label="Search">
+			<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 		</form>
-		
+
 		<!-- MyAccount button that will redirect to the My Account page -->
 		<a id="myaccount" href="myAccount.html">
-		<button class="btn btn-primary my-2 my-sm-0" type="button">MyAccount</button>
+			<button class="btn btn-primary my-2 my-sm-0" type="button">MyAccount</button>
 		</a>
-		
+
 		<!-- MyCart button to see what is in your cart -->
-		<a id="cart" href="myCart.html">
-			<input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
+		<a id="cart" href="myCart.html"> <input type="image"
+			src="../images/cart.png" alt="Submit" width="24" height="24">
 		</a>
- 
+
 	</nav>
 
-<!-- Nav tag for second level selections for categories and home button -->
+	<!-- Nav tag for second level selections for categories and home button -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-		
+
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li id="home" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link" href="home.html">Home
-						<span class="sr-only">(current)</span>
+				<li id="home" class="btn btn-outline-primary waves-effect"
+					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
+					class="nav-link" href="home.html">Home <span class="sr-only">(current)</span>
 				</a></li>
-				
+
 				<!-- Products button that will redirect to the products page -->
-				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px">
+				<li id="product" class="btn btn-outline-primary waves-effect"
+					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
 					<a class="nav-link" href="products.html">Products</a>
 				</li>
-<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown" -->
-<!-- 					role="button" data-toggle="dropdown" aria-haspopup="true" -->
-<!-- 					aria-expanded="false"> Categories </a> -->
-<!-- 					<div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-<!-- 						<a class="dropdown-item" href="#">Food</a> <a -->
-<!-- 							class="dropdown-item" href="#">Toys</a> -->
-<!-- <!-- 						<div class="dropdown-divider"></div> -->
-<!-- 						<a class="dropdown-item" href="#">Beds & Grooming</a> -->
-<!-- 						<a class="dropdown-item" href="#">Grooming</a> -->
-<!-- 						<a class="dropdown-item" href="#">Apparel</a> -->
-<!-- 					</div></li> -->
-<!-- 				<li class="nav-item"><a class="nav-link disabled" href="#" -->
-<!-- 					tabindex="-1" aria-disabled="true">Disabled</a></li> -->
+				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown" -->
+				<!-- 					role="button" data-toggle="dropdown" aria-haspopup="true" -->
+				<!-- 					aria-expanded="false"> Categories </a> -->
+				<!-- 					<div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+				<!-- 						<a class="dropdown-item" href="#">Food</a> <a -->
+				<!-- 							class="dropdown-item" href="#">Toys</a> -->
+				<!-- <!-- 						<div class="dropdown-divider"></div> -->
+				<!-- 						<a class="dropdown-item" href="#">Beds & Grooming</a> -->
+				<!-- 						<a class="dropdown-item" href="#">Grooming</a> -->
+				<!-- 						<a class="dropdown-item" href="#">Apparel</a> -->
+				<!-- 					</div></li> -->
+				<!-- 				<li class="nav-item"><a class="nav-link disabled" href="#" -->
+				<!-- 					tabindex="-1" aria-disabled="true">Disabled</a></li> -->
 			</ul>
 		</div>
 	</nav>
 
-<div class="container bootstrap snippet" style="padding-bottom: 40px">
-    <div class="col-md-9 col-sm-8 content">
-        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-info panel-shadow">
-                    <div class="panel-body"> 
-                        <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Description</th>
-                                <th>Qty</th>
-                                <th>Price</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/100x100/" class="img-cart"></td>
-                                    <td><strong>Product 1</strong></td>
-                                    <td>
-                                    <form class="form-inline">
-                                        <input class="form-control" type="text" value="1" >
-                                        <button rel="tooltip" class="btn btn-default"><i class="fas fa-pencil-alt"></i></button>
-                                        <a href="#" class="btn btn-primary" style="background-color: #cc3318; border: none"><i class="fas fa-trash-alt"></i></a>
-                                    </form>
-                                    </td>
-                                    <td>$54.00</td>
-                                    <td>$54.00</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/100x100/" class="img-cart"></td>
-                                    <td><strong>Product 2</strong></td>
-                                    <td>
-                                    <form class="form-inline">
-                                        <input class="form-control" type="text" value="2">
-                                        <button class="btn btn-default" style="border: 1px solid lightgray; padding-left: 10px; padding-right:10px"><i class="fas fa-pencil-alt"></i></button>
-                                        <a href="#" class="btn btn-primary" style="background-color: #cc3318; border:none"><i class="fas fa-trash-alt"></i></a>
-                                    </form>
-                                    </td>
-                                    <td>$16.00</td>
-                                    <td>$32.00</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="text-right">Total Product</td>
-                                    <td>$86.00</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="text-right">Total Shipping</td>
-                                    <td>$2.00</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="text-right"><strong>Total</strong></td>
-                                    <td>$88.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                </div>
-                <a href="products.html" class="btn btn-success"><i class="fas fa-angle-left"></i> Continue Shopping</a>
-                <a href="#" class="btn btn-primary float-right">Next <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="container bootstrap snippet" style="padding-bottom: 40px">
+		<div class="col-md-9 col-sm-8 content">
 
-<!-- Footer -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-info panel-shadow">
+						<div class="panel-body">
+							<div class="table-responsive" id="cartDiv">
+							</div>
+						</div>
+					</div>
+					<a href="products.html" class="btn btn-success"><i
+						class="fas fa-angle-left"></i> Continue Shopping</a> <a href="#"
+						class="btn btn-primary float-right" id="btnNext">Next <i
+						class="fas fa-angle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
 	<footer class="page-footer font-small blue-grey lighten-5">
 
 		<div style="background-color: #3071A9;">
@@ -187,38 +104,39 @@
 					<!-- Grid column -->
 					<div
 						class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-						<h6 class="mb-0" style="color: white">Get connected with us on social networks!</h6>
+						<h6 class="mb-0" style="color: white">Get connected with us
+							on social networks!</h6>
 					</div>
 					<!-- Grid column -->
 
 					<!-- Grid column -->
 					<div class="col-md-6 col-lg-7 text-center text-md-right"
-					style="color: white">
+						style="color: white">
 
 						<!-- Facebook -->
-						<a class="fb-ic" href="http://www.facebook.com" 
-						style="color:inherit; text-decoration:none"> <i class="fab fa-facebook-f white-text mr-4">
-						</i>
+						<a class="fb-ic" href="http://www.facebook.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-facebook-f white-text mr-4"> </i>
 						</a>
 						<!-- Twitter -->
 						<a class="tw-ic" href="http://www.twitter.com"
-						style="color:inherit; text-decoration:none"> <i class="fab fa-twitter white-text mr-4">
-						</i>
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-twitter white-text mr-4"> </i>
 						</a>
 						<!-- Youtube -->
-						<a class="gplus-ic" href="http://www.youtube.com" 
-						style="color:inherit; text-decoration:none"> <i
+						<a class="gplus-ic" href="http://www.youtube.com"
+							style="color: inherit; text-decoration: none"> <i
 							class="fab fa-youtube white-text mr-4"> </i>
 						</a>
 						<!--Linkedin -->
-						<a class="li-ic" href="http://www.linkedin.com" 
-						style="color:inherit; text-decoration:none"> <i
+						<a class="li-ic" href="http://www.linkedin.com"
+							style="color: inherit; text-decoration: none"> <i
 							class="fab fa-linkedin-in white-text mr-4"> </i>
 						</a>
 						<!--Instagram-->
-						<a class="ins-ic" href="http://www.instagram.com" 
-						style="color:inherit; text-decoration:none"> <i class="fab fa-instagram white-text">
-						</i>
+						<a class="ins-ic" href="http://www.instagram.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-instagram white-text"> </i>
 						</a>
 
 					</div>
@@ -243,8 +161,8 @@
 					<h6 class="text-uppercase font-weight-bold">Pawsco</h6>
 					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 						style="width: 60px;">
-					<p>We are committed to providing our members with the highest-quality pet products 
-					at the lowest possible pet prices.</p>
+					<p>We are committed to providing our members with the
+						highest-quality pet products at the lowest possible pet prices.</p>
 
 				</div>
 				<!-- Grid column -->
@@ -332,8 +250,8 @@
 
 		<!-- Copyright -->
 		<div class="footer-copyright text-center text-black-50 py-3">
-			© 2020 Copyright: <a class="dark-grey-text"
-				href="#!">Pawsco Wholesale Corporation</a>. All rights reserved.
+			© 2020 Copyright: <a class="dark-grey-text" href="#!">Pawsco
+				Wholesale Corporation</a>. All rights reserved.
 		</div>
 		<!-- Copyright -->
 
