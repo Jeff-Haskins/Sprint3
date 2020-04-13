@@ -8,6 +8,7 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 <link href="../Style/product.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../scripts/filter.js"></script>
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -66,24 +67,24 @@
 				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link"
 					href="products.html">Products</a></li>
 				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
-				<li id="filter" class="nav-item dropdown"><a
+				<li id="filter" class=".nav-item dropdown"><a
 					class="nav-link dropdown-toggle btn btn-success" href="#"
 					id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Filter </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Food</a> <a
-							class="dropdown-item" href="#">Toys</a>
-						<!-- 						<div class="dropdown-divider"></div> -->
-						<a class="dropdown-item" href="#">Beds & Grooming</a> <a
-							class="dropdown-item" href="#">Grooming</a> <a
-							class="dropdown-item" href="#">Apparel</a>
+						<a class="dropdown-item" href="#" onclick="showAll();">Show All</a>
+						<a class="dropdown-item" href="#" onclick="showFood();">Food</a> 
+						<a class="dropdown-item" href="#" onclick="showToys();">Toys</a>
+						<a class="dropdown-item" href="#" onclick="showFurniture();">Beds & Furniture</a> 
+						<a class="dropdown-item" href="#" onclick="showGrooming();">Grooming</a> 
+						<a class="dropdown-item" href="#" onclick="showApparel();">Apparel</a>
 					</div></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container">
-		<div class="row row-cols-1 row-cols-md-3 dog-food">
+		<div class="dog-food row row-cols-1 row-cols-md-3" >
 			<div class="col mb-4">
 				<div class="card h-100 item-card">
 					<!--Card image-->
@@ -208,7 +209,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-toy">
+		<div id="content3" class="dog-toy row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card">
 					<!--Card image-->
@@ -334,7 +335,7 @@
 				<!-- Card -->
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-furniture">
+		<div id="content4" class="dog-furniture row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card">
 					<!--Card image-->
@@ -458,7 +459,7 @@
 				<!-- Card -->
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-grooming">
+		<div id="div5" class="dog-grooming row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card">
 					<!--Card image-->
@@ -587,7 +588,7 @@
 				<!-- Card -->
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-apparel">
+		<div id="div6" class="dog-apparel row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card">
 					<!--Card image-->
