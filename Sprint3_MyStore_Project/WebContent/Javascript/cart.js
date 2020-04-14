@@ -30,8 +30,7 @@ $(document).ready(function() {
 				
 				cartTable = cartTable.concat(
 						`<tr>
-							<td><img src="https://via.placeholder.com/100x100/"
-								class="img-cart"></td>
+							<td><img src="${product.img}" class="img-cart" width="auto" height="100"></td>
 							<td><strong>${product.name}</strong></td>
 							<td>
 							<form class="form-inline">
@@ -73,27 +72,6 @@ $(document).ready(function() {
 			cartDiv.html(cartTable);
 		}
 	}
-	
-	$("#btnNext").click(function() {
-		var item1 = {
-			name:"Dog",
-			price:"29.95",
-			qty:"7"
-		};
-		var item2 = {
-			name:"Cat",
-			price:"19.95",
-			qty:"23"
-		};
-
-		var cart = [];
-		cart.push(item1);
-		cart.push(item2);
-
-		var cartString = JSON.stringify(cart);
-		sessionStorage.setItem("cart", cartString);
-		location.reload();
-	});
 		
 	showCart();
 	
