@@ -1,0 +1,37 @@
+$(document).ready(function() {
+	$("input:submit").click(function(e) {
+		e.preventDefault();
+		
+		var prodDiv = $(this).parent().parent();
+		var name = prodDiv.find(".card-title").html();
+		var price = prodDiv.find(".price").html().replace('$', '');
+		var qty = parseInt(prodDiv.find("#quantity").val());
+		var img = prodDiv.parent().parent().find("img").attr("src");
+		
+		var cart = JSON.parse(sessionStorage.getItem("cart"));
+        if (cart == null) {
+            cart = [];
+        } else {
+        	var exists = false;
+        	
+        	cart.forEach(product => {
+        		if (product.name == name) {
+        			exists = true;
+        			product.qty += qty;
+        			sessionStorage.setItem("cart", JSON.stringify(cart));
+        		}
+        	});
+        	
+        	if (!exists) {
+        		var item = {
+        			name:name,
+        			price:price,
+        			qty:qty,
+        			img:img
+        		};
+        		cart.push(item);
+        		sessionStorage.setItem("cart", JSON.stringify(cart));
+        	}
+        }
+	});
+});

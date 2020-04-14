@@ -8,6 +8,7 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 <link href="../Style/product.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../scripts/filter.js"></script>
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -22,6 +23,7 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+	<script src="../Javascript/temp.js"></script>
 
 </head>
 <body>
@@ -68,24 +70,24 @@
 					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
 					class="nav-link" href="products.html">Products</a></li>
 				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
-				<li id="filter" class="nav-item dropdown"><a
+				<li id="filter" class=".nav-item dropdown"><a
 					class="nav-link dropdown-toggle btn btn-success" href="#"
 					id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Filter </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Food</a> <a
-							class="dropdown-item" href="#">Toys</a>
-						<!-- 						<div class="dropdown-divider"></div> -->
-						<a class="dropdown-item" href="#">Beds & Grooming</a> <a
-							class="dropdown-item" href="#">Grooming</a> <a
-							class="dropdown-item" href="#">Apparel</a>
+						<a class="dropdown-item" href="#" onclick="showAll();">Show All</a>
+						<a class="dropdown-item" href="#" onclick="showFood();">Food</a> 
+						<a class="dropdown-item" href="#" onclick="showToys();">Toys</a>
+						<a class="dropdown-item" href="#" onclick="showFurniture();">Beds & Furniture</a> 
+						<a class="dropdown-item" href="#" onclick="showGrooming();">Grooming</a> 
+						<a class="dropdown-item" href="#" onclick="showApparel();">Apparel</a>
 					</div></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container">
-		<div class="row row-cols-1 row-cols-md-3 dog-food">
+		<div class="dog-food row row-cols-1 row-cols-md-3" >
 			<div class="col mb-4">
 				<div class="card h-100 item-card" id="product1">
 					<!--Card image-->
@@ -103,10 +105,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Nulo FreeStyle Limited+</h4>
-							<h4>$74.99</h4>
+							<h4 class="price">$74.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -147,10 +149,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Blue Buffalo</h4>
-							<h4>$3.99</h4>
+							<h4 class="price">$3.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -184,12 +186,11 @@
 					<div class="card-body">
 						<div class="collapse-content">
 							<!--Title-->
-							<h4 class="card-title">Kirkland Signature Dental Chews,
-								72-count</h4>
-							<h4>$19.99</h4>
+							<h4 class="card-title">Kirkland Signature Dental Chews, 72-count</h4>
+							<h4 class="price">$19.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -212,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-toy">
+		<div id="content3" class="dog-toy row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card" id="product4">
 					<!--Card image-->
@@ -229,10 +230,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">KONG Classic Dog Toy, X-Large</h4>
-							<h4>$9.99</h4>
+							<h4 class="price">$9.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+                  name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -272,12 +273,11 @@
 					<div class="card-body">
 						<div class="collapse-content">
 							<!--Title-->
-							<h4 class="card-title">STAR WARS Darth Vader Rope Dog Toy,
-								Large</h4>
-							<h4>$11.99</h4>
+							<h4 class="card-title">STAR WARS Darth Vader Rope Dog Toy, Large</h4>
+							<h4 class="price">$11.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -313,10 +313,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Marvel Deadpool Rubber Dog Toy, Small</h4>
-							<h4>$6.99</h4>
+							<h4 class="price">$6.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -339,7 +339,7 @@
 				<!-- Card -->
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-furniture">
+		<div id="content4" class="dog-furniture row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card" id="product7">
 					<!--Card image-->
@@ -355,10 +355,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Elegant Wooden Pet Bed</h4>
-							<h4>$49.99</h4>
+							<h4 class="price">$49.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -395,10 +395,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Orthopedic Dog Bed</h4>
-							<h4>$29.99</h4>
+							<h4 class="price">$29.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -434,10 +434,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Studio Dog Crate</h4>
-							<h4>$89.99</h4>
+							<h4 class="price">$89.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -463,7 +463,7 @@
 				<!-- Card -->
 			</div>
 		</div>
-		<div class="row row-cols-1 row-cols-md-3 dog-grooming">
+		<div id="div5" class="dog-grooming row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card" id="product10">
 					<!--Card image-->
@@ -479,10 +479,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Nail Clipper</h4>
-							<h4>$4.99</h4>
+							<h4 class="price">$4.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -522,10 +522,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">FURminator Fur Brush</h4>
-							<h4>$7.99</h4>
+							<h4 class="price">$7.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -567,10 +567,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Burt's Bee Shampoo</h4>
-							<h4>$4.99</h4>
+							<h4 class="price">$4.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -609,10 +609,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Rain Coat</h4>
-							<h4>$19.99</h4>
+							<h4 class="price">$19.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -654,10 +654,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Sweater</h4>
-							<h4>$14.99</h4>
+							<h4 class="price">$14.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
@@ -693,10 +693,10 @@
 						<div class="collapse-content">
 							<!--Title-->
 							<h4 class="card-title">Winter Jacket</h4>
-							<h4>$21.99</h4>
+							<h4 class="price">$21.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10"> <input type="submit"
+									name="quantity" min="1" max="10" value="1"> <input type="submit"
 									class="btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
