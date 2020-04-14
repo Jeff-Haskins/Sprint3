@@ -6,7 +6,7 @@ $(document).ready(function() {
 	
 	function showCart() {
 		if (cart == null || cart.length == 0) {
-			cartDiv.html(`<h4 style="text-align: center">Your cart is empty.</h4>`);
+			cartDiv.html(`<br><h4 style="text-align: center">Your cart is empty.</h4><br>`);
 			$("#btnNext").hide();
 		} else {
 			var cartTable = 
@@ -31,10 +31,10 @@ $(document).ready(function() {
 				cartTable = cartTable.concat(
 						`<tr>
 							<td><img src="${product.img}" class="img-cart" width="auto" height="100"></td>
-							<td><strong>${product.name}</strong></td>
+							<td style="max-width:200px"><strong>${product.name}</strong></td>
 							<td>
 							<form class="form-inline">
-								<input class="form-control" type="text" value="${product.qty}">
+								<input class="form-control" type="text" value="${product.qty}" size="7">
 								<button class="btn btn-default btnEdit"
 									style="border: 1px solid lightgray; padding-left: 10px; padding-right: 10px">
 									<i class="fas fa-pencil-alt"></i>

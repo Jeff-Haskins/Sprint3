@@ -9,11 +9,11 @@ $(document).ready(function() {
 		var img = prodDiv.parent().parent().find("img").attr("src");
 		
 		var cart = JSON.parse(sessionStorage.getItem("cart"));
+		var exists = false;
+		
         if (cart == null) {
             cart = [];
         } else {
-        	var exists = false;
-        	
         	cart.forEach(product => {
         		if (product.name == name) {
         			exists = true;
@@ -21,18 +21,18 @@ $(document).ready(function() {
         			sessionStorage.setItem("cart", JSON.stringify(cart));
         		}
         	});
-        	
-        	if (!exists) {
-        		var item = {
-        			name:name,
-        			price:price,
-        			qty:qty,
-        			img:img
-        		};
-        		cart.push(item);
-        		sessionStorage.setItem("cart", JSON.stringify(cart));
-        	}
         }
+        
+        if (!exists) {
+    		var item = {
+    			name:name,
+    			price:price,
+    			qty:qty,
+    			img:img
+    		};
+    		cart.push(item);
+    		sessionStorage.setItem("cart", JSON.stringify(cart));
+    	}
         
         window.location.href = "myCart.html";
 	});
