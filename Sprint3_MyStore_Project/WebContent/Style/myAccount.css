@@ -1,0 +1,14 @@
+
+#cart{
+	position: absolute;
+  	right: 0px;
+  	width: 150px;
+  	padding: 10px;
+}
+
+.btn-group{
+	position: absolute;
+	right: 180px;
+	width: 120px;
+	padding: 10px;
+}
