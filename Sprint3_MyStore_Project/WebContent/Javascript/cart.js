@@ -1,16 +1,16 @@
 $(document).ready(function() {
 	
-	var cart2 = JSON.parse(sessionStorage.getItem("cart"));
+	var cart = JSON.parse(sessionStorage.getItem("cart"));
 	var cartDiv = $("#cartDiv");
 	var orderTotal = 0;
 	
 	function showCart() {
-		if (cart2 == null || cart2.length == 0) {
-			cartDiv.html("<h4 style=\"text-align: center\">Your cart is empty.</h4>");
+		if (cart == null || cart.length == 0) {
+			cartDiv.html(`<h4 style="text-align: center">Your cart is empty.</h4>`);
 			// $("#btnNext").hide();
 		} else {
 			var cartTable = 
-				`<table class=\"table\">
+				`<table class="table">
 					<thead>
 						<tr>
 							<th></th>
@@ -24,26 +24,25 @@ $(document).ready(function() {
 			
 			var index = 0;
 			
-			cart2.forEach(product => {
+			cart.forEach(product => {
 				var itemTotal = (product.price * product.qty).toFixed(2);
 				orderTotal += parseFloat(itemTotal);
 				
 				cartTable = cartTable.concat(
 						`<tr>
-							<td><img src="https://via.placeholder.com/100x100/"
-								class="img-cart"></td>
+							<td><img src="${product.img}" class="img-cart" width="auto" height="100"></td>
 							<td><strong>${product.name}</strong></td>
 							<td>
 							<form class="form-inline">
 								<input class="form-control" type="text" value="${product.qty}">
-									<button class="btn btn-default"
-										style="border: 1px solid lightgray; padding-left: 10px; padding-right: 10px">
-										<i class="fas fa-pencil-alt"></i>
-									</button>
-									<button class="btn btn-primary btnDelete"
-										style="background-color: #cc3318; border: none"
-										value="${index++}">
-										<i class="fas fa-trash-alt"></i></a>
+								<button class="btn btn-default btnEdit"
+									style="border: 1px solid lightgray; padding-left: 10px; padding-right: 10px">
+									<i class="fas fa-pencil-alt"></i>
+								</button>
+								<button class="btn btn-primary btnDelete"
+									style="background-color: #cc3318; border: none"
+									value="${index++}">
+									<i class="fas fa-trash-alt"></i></a>
 							</form>
 							</td>
 							<td>$${product.price}</td>
@@ -65,7 +64,7 @@ $(document).ready(function() {
 							</tr>
 							<tr>
 								<td colspan="4" class="text-right"><strong>Total</strong></td>
-								<td>$${orderTotal + tax}</td>
+								<td>$${(orderTotal + tax).toFixed(2)}</td>
 							</tr>
 						</tbody>
 					</table>`);
@@ -73,34 +72,21 @@ $(document).ready(function() {
 			cartDiv.html(cartTable);
 		}
 	}
+		
+	showCart();
 	
-	$("#btnNext").click(function() {
-		var item1 = {
-			name:"Dog",
-			price:"29.95",
-			qty:"7"
-		};
-		var item2 = {
-			name:"Cat",
-			price:"19.95",
-			qty:"23"
-		};
-
-		var cart = [];
-		cart.push(item1);
-		cart.push(item2);
-
-		var cartString = JSON.stringify(cart);
-		sessionStorage.setItem("cart", cartString);
+	$(".btnEdit").click(function() {
+		var qty = $(this).siblings(":input").val();
+		var i = $(this).siblings(".btnDelete").val();
+		cart[i].qty = qty;
+		sessionStorage.setItem("cart", JSON.stringify(cart));
 		location.reload();
 	});
 		
-		showCart();
-	
 	$(".btnDelete").click(function() {
 		var i = $(this).val();
-		cart2.splice(i, 1);
-		sessionStorage.setItem("cart", JSON.stringify(cart2));
+		cart.splice(i, 1);
+		sessionStorage.setItem("cart", JSON.stringify(cart));
 		location.reload();
 	});
 });
