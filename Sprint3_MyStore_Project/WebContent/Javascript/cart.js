@@ -7,7 +7,7 @@ $(document).ready(function() {
 	function showCart() {
 		if (cart == null || cart.length == 0) {
 			cartDiv.html(`<h4 style="text-align: center">Your cart is empty.</h4>`);
-			// $("#btnNext").hide();
+			$("#btnNext").hide();
 		} else {
 			var cartTable = 
 				`<table class="table">

@@ -33,5 +33,7 @@ $(document).ready(function() {
         		sessionStorage.setItem("cart", JSON.stringify(cart));
         	}
         }
+        
+        window.location.href = "myCart.html";
 	});
 });
