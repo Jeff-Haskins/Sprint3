@@ -38,10 +38,18 @@
 				<button class="btn btn-primary my-2 my-sm-0" type="submit"  id="searchButton">Search</button>
 		</form>
 		
-		<!-- MyAccount button that will redirect to the My Account page -->
-		<a id="myaccount" href="myAccount.html">
-		<button class="btn btn-primary my-2 my-sm-0" type="button">MyAccount</button>
-		</a>
+		<!-- 		MyAccount button that will redirect to the My Account page -->
+		<div class="btn-group">
+  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
+  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
+  
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+						<a class="dropdown-item" href="#">Orders</a> 
+						<a class="dropdown-item" href="#">Wishlist</a>
+						<a class="dropdown-item" href="#">Logout</a> 
+					</div>
+		</div>
 		
 		<!-- MyCart button to see what is in your cart -->
 		<a id="cart" href="myCart.html">

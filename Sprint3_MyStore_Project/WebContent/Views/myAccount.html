@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="../Style/home.css" rel="stylesheet" type="text/css" />
+<link href="../Style/myAccount.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../scripts/myAccount.js"></script>
 
 <link rel="stylesheet"
@@ -40,26 +40,18 @@
 				<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 		</form>
 		
-		<!-- MyAccount button that will redirect to the My Account page -->
-<!-- 		<div class="MyAccount collapse navbar-collapse" id="accountNavBar"> -->
-<!-- 			<ul class="navbar-nav mr-auto"> -->
-<!-- 				<li id="filter" class=".nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle btn btn-success" href="#" -->
-<!-- 					id="navbarDropdown" role="button" data-toggle="dropdown" -->
-<!-- 					aria-haspopup="true" aria-expanded="false"> Filter </a> -->
-<!-- 					<div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-<!-- 						<a class="dropdown-item" href="#" onclick="showAll();">Show All</a> -->
-<!-- 						<a class="dropdown-item" href="#" onclick="showFood();">Food</a>  -->
-<!-- 						<a class="dropdown-item" href="#" onclick="showToys();">Toys</a> -->
-<!-- 						<a class="dropdown-item" href="#" onclick="showFurniture();">Beds & Furniture</a>  -->
-<!-- 						<a class="dropdown-item" href="#" onclick="showGrooming();">Grooming</a>  -->
-<!-- 						<a class="dropdown-item" href="#" onclick="showApparel();">Apparel</a> -->
-<!-- 					</div></li> -->
-<!-- 			</ul> -->
-<!-- 		</div> -->
-		<a id="myaccount" href="myAccount.html">
-		<button class="btn btn-primary my-2 my-sm-0" type="button">MyAccount</button>
-		</a>
+<!-- 		MyAccount button that will redirect to the My Account page -->
+		<div class="btn-group">
+  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
+  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
+  
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+						<a class="dropdown-item" href="#">Orders</a> 
+						<a class="dropdown-item" href="#">Wishlist</a>
+						<a class="dropdown-item" href="#">Logout</a> 
+					</div>
+		</div>
 		
 		<!-- MyCart button to see what is in your cart -->
 		<a id="cart" href="myCart.html">
@@ -74,12 +66,15 @@
 		
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li id="home" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link" href="#">Home
+				<li id="home" class="btn btn-outline-primary waves-effect" 
+				style="width:80px;height:40px;margin:5px;padding:0px 1px">
+				<a class="nav-link" href="home.html">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
 				
 				<!-- Products button that will redirect to the products page -->
-				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px">
+				<li id="product" class="btn btn-outline-primary waves-effect" 
+				style="width:80px;height:40px;margin:5px;padding:0px 1px">
 					<a class="nav-link" href="products.html">Products</a>
 				</li>
 			</ul>
