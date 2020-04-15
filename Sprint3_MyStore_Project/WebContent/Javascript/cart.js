@@ -101,6 +101,7 @@ $(document).ready(function() {
 			tax:tax,
 			total:total
 		};
+		
 		sessionStorage.setItem("totals", JSON.stringify(totals));
 		location.href = "checkout.html";
 	});
