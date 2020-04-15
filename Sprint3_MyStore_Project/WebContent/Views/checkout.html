@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="./css/form-validation.css" rel="stylesheet">
+    <link href="../Style/home.css" rel="stylesheet" type="text/css" />
     <title>Checkout</title>
   </head>
   <body class="bg-light">
-  
-  <!-- Nav bar for search bar, my account button, and shopping cart button -->
+<!-- Nav bar for search bar, my account button, and shopping cart button -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-		<a class="navbar-brand" href="home.html"> <img
-			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
-
+	
+		<a class="navbar-brand" href="home.html">
+		<img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
+		
 		<!-- Search Bar Form -->
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search"
-				placeholder="Search" aria-label="Search" id="searchProductInput">
-			<button class="btn btn-primary my-2 my-sm-0" id="searchButton" type="submit">Search</button>
+		<form class="form-inline my-2 my-lg-0" action="products.html">
+				<input class="form-control mr-sm-2" type="search"
+					placeholder="Search" aria-label="Search" id="searchProductInput">
+				<button class="btn btn-primary my-2 my-sm-0" type="submit"  id="searchButton">Search</button>
 		</form>
-
+		
 		<!-- 		MyAccount button that will redirect to the My Account page -->
 		<div class="btn-group">
   			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
@@ -33,51 +33,32 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
 						<a class="dropdown-item" href="#">Orders</a> 
-						<a class="dropdown-item" href="wishlist.html">Wishlist</a>
+						<a class="dropdown-item" href="#">Wishlist</a>
 						<a class="dropdown-item" href="#">Logout</a> 
 					</div>
 		</div>
-
+		
 		<!-- MyCart button to see what is in your cart -->
-		<a id="cart" href="myCart.html"> <input type="image"
-			src="../images/cart.png" alt="Submit" width="24" height="24">
+		<a id="cart" href="myCart.html">
+			<input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
 		</a>
-
-	</nav>
-
-	<!-- Nav tag for second level selections for categories and home button -->
+ <!-- Nav tag for second level selections for categories and home button -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-
+		
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li id="home" class="btn btn-outline-primary waves-effect"
-					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
-					class="nav-link" href="home.html">Home <span class="sr-only">(current)</span>
+				<li id="home" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
 				</a></li>
-
+				
 				<!-- Products button that will redirect to the products page -->
-				<li id="product" class="btn btn-outline-primary waves-effect"
-					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
+				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px">
 					<a class="nav-link" href="products.html">Products</a>
 				</li>
-				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
-				<!-- 				<li class="nav-item dropdown"><a -->
-				<!-- 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown" -->
-				<!-- 					role="button" data-toggle="dropdown" aria-haspopup="true" -->
-				<!-- 					aria-expanded="false"> Categories </a> -->
-				<!-- 					<div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-				<!-- 						<a class="dropdown-item" href="#">Food</a> <a -->
-				<!-- 							class="dropdown-item" href="#">Toys</a> -->
-				<!-- <!-- 						<div class="dropdown-divider"></div> -->
-				<!-- 						<a class="dropdown-item" href="#">Beds & Grooming</a> -->
-				<!-- 						<a class="dropdown-item" href="#">Grooming</a> -->
-				<!-- 						<a class="dropdown-item" href="#">Apparel</a> -->
-				<!-- 					</div></li> -->
-				<!-- 				<li class="nav-item"><a class="nav-link disabled" href="#" -->
-				<!-- 					tabindex="-1" aria-disabled="true">Disabled</a></li> -->
 			</ul>
 		</div>
+	</nav>
 	</nav>
   
     <div class="container">
