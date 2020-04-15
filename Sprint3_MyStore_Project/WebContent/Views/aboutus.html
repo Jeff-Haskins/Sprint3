@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to Pawsco Wholesale</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<link href="../Style/home.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<!-- Nav bar for search bar, my account button, and shopping cart button -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<a class="navbar-brand" href="home.html"> <img
+			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
+
+		<!-- Search Bar Form -->
+		<form class="form-inline my-2 my-lg-0" action="products.html">
+			<input class="form-control mr-sm-2" type="search"
+				placeholder="Search" aria-label="Search" id="searchProductInput">
+			<button class="btn btn-primary my-2 my-sm-0" type="submit"
+				id="searchButton">Search</button>
+		</form>
+
+		<!-- 		MyAccount button that will redirect to the My Account page -->
+		<div class="btn-group">
+			<button type="button"
+				class="MyAccountBtn btn btn-primary dropdown-toggle"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
+				Account</button>
+
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+				<a class="dropdown-item" href="#">Orders</a> <a
+					class="dropdown-item" href="#">Wishlist</a> <a
+					class="dropdown-item" href="#">Logout</a>
+			</div>
+		</div>
+
+		<!-- MyCart button to see what is in your cart -->
+		<a id="cart" href="myCart.html"> <input type="image"
+			src="../images/cart.png" alt="Submit" width="24" height="24">
+		</a>
+
+	</nav>
+
+	<!-- Nav tag for second level selections for categories and home button -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li id="home" class="btn btn-outline-primary waves-effect"
+					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
+					class="nav-link" href="#">Home <span class="sr-only">(current)</span>
+				</a></li>
+
+				<!-- Products button that will redirect to the products page -->
+				<li id="product" class="btn btn-outline-primary waves-effect"
+					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
+					<a class="nav-link" href="products.html">Products</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div style="text-align: center">
+		<div style="width: 80%; display: inline-block; text-align: left">
+			<br>
+			<br>
+			<h4>Did You Know?</h4>
+			Pawsco Wholesale is a multi-billion dollar global retailer with
+			warehouse club operations in eight countries. We are the recognized
+			leader in our field, dedicated to quality in every area of our
+			business and respected for our outstanding business ethics. Despite
+			our large size and explosive international expansion, we continue to
+			provide a family atmosphere in which our employees thrive and
+			succeed. We are proud to have been named by Washington CEO Magazine
+			as one of the top three companies to work for in the state of
+			Washington.<br>
+			<br>
+			<hr>
+
+			<h4>What Is Pawsco?</h4>
+			Pawsco is a membership warehouse club, dedicated to bringing our
+			members the best possible prices on quality brand-name pet merchandise.
+			With hundreds of locations worldwide, Pawsco provides a wide
+			selection of merchandise, plus the convenience of specialty
+			departments and exclusive member services, all designed to make your
+			shopping experience a pleasurable one.<br>
+			<br>
+
+			<hr>
+
+			<h4>The History of Pawsco</h4>
+			The company's first location, opened in 1976 under the Pet Club
+			name, was in a converted airplane hangar on Morena Boulevard in San
+			Diego. Originally serving only small businesses, the company found it
+			could achieve far greater buying clout by also serving a selected
+			audience of non-business members. With that change, the growth of the
+			warehouse club industry was off and running. In 1983, the first
+			Pawsco warehouse location was opened in Seattle. Pawsco became the
+			first company ever to grow from zero to $3 billion in sales in less
+			than six years. When Pawsco and Pet Club merged in 1993, the
+			combined company, operating under the name PetPawsco, had 206
+			locations generating $16 billion in annual sales.<br>
+			<br> Our operating philosophy has been simple. Keep costs down
+			and pass the savings on to our members. Our large membership base and
+			tremendous buying power, combined with our never-ending quest for
+			efficiency, result in the best possible prices for our members. Since
+			resuming the Pawsco name in 1997, the company has grown worldwide
+			with total sales in recent fiscal years exceeding $64 billion. For
+			additional information about Pawsco, download the Pawsco Story in a
+			PDF format to learn more.<br>
+			<br> Pawsco has transformed the retail world. When entrepreneur
+			Sol Price introduced a groundbreaking retail concept in San Diego,
+			California. Pet Club was the world's first membership warehouse
+			club, a place where efficient buying and operating practices gave
+			members access to unmatched savings.<br>
+			<br> At first, Pet Club was limited exclusively to business
+			members, who could purchase a wide range of supplies and wholesale
+			items. Jim Sinegal, the executive vice-president of merchandising,
+			distribution and marketing, was instrumental in fine-tuning the
+			merchandise and marketing strategies, helping to turn Pet Club into
+			a success story that changed the face of retailing worldwide.<br>
+			<br> Seven years later, Jim Sinegal channeled his expertise into
+			co-founding Pawsco Wholesale with Jeff Brotman, and together they
+			opened the first warehouse in Seattle, Washington in 1983.<br>
+			<br> Over the next decade, both Pet Club and Pawsco Wholesale
+			continued to innovate and grow, and in 1993, the two mega-retailers
+			merged, creating a gifted leadership team that soon made Pawsco the
+			world's most successful warehouse club.<br>
+			<br> Today, as the company evolves, it stays true to the
+			qualities that helped attract and retain millions of loyal members
+			around the globe:<br>
+			<br> Commitment to quality. Pawsco warehouses carry about 4,000
+			SKUs (stock keeping units) compared to the 30,000 found at most
+			supermarkets. By carefully choosing products based on quality, price,
+			brand, and features, the company can offer the best value to members.<br>
+			<br> Entrepreneurial spirit. Throughout the decades, the
+			entrepreneurial drive for excellence has continued to define Pawsco
+			staff at every level. From its management team to the people on the
+			warehouse floor, everyone is united in a common goal to exceed member
+			expectations.<br>
+			<br> Employee focus. Pawsco is often noted for being much more
+			employee-focused than other Fortune 500 companies. By offering fair
+			wages and top-notch benefits, the company has created a workplace
+			culture that attracts positive, high-energy, talented employees.<br>
+			<br>
+			<br>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small blue-grey lighten-5">
+
+		<div style="background-color: #3071A9;">
+			<div class="container">
+
+				<!-- Grid row-->
+				<div class="row py-4 d-flex align-items-center">
+
+					<!-- Grid column -->
+					<div
+						class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+						<h6 class="mb-0" style="color: white">Get connected with us
+							on social networks!</h6>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-6 col-lg-7 text-center text-md-right"
+						style="color: white">
+
+						<!-- Facebook -->
+						<a class="fb-ic" href="http://www.facebook.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-facebook-f white-text mr-4"> </i>
+						</a>
+						<!-- Twitter -->
+						<a class="tw-ic" href="http://www.twitter.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-twitter white-text mr-4"> </i>
+						</a>
+						<!-- Youtube -->
+						<a class="gplus-ic" href="http://www.youtube.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-youtube white-text mr-4"> </i>
+						</a>
+						<!--Linkedin -->
+						<a class="li-ic" href="http://www.linkedin.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-linkedin-in white-text mr-4"> </i>
+						</a>
+						<!--Instagram-->
+						<a class="ins-ic" href="http://www.instagram.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-instagram white-text"> </i>
+						</a>
+
+					</div>
+					<!-- Grid column -->
+
+				</div>
+				<!-- Grid row-->
+
+			</div>
+		</div>
+
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left mt-5">
+
+			<!-- Grid row -->
+			<div class="row mt-3 dark-grey-text">
+
+				<!-- Grid column -->
+				<div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+					<!-- Content -->
+					<h6 class="text-uppercase font-weight-bold">Pawsco</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 60px;">
+					<p>We are committed to providing our members with the
+						highest-quality pet products at the lowest possible pet prices.</p>
+
+				</div>
+				<!-- Grid column -->
+
+				<!-- Grid column -->
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">About</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 60px;">
+					<p>
+						<a class="dark-grey-text" href="#!">About Us</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Careers</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">User Stories</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Testimonials</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Press</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Photos</a>
+					</p>
+
+				</div>
+				<!-- Grid column -->
+
+				<!-- Grid column -->
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">Help</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 60px;">
+					<p>
+						<a class="dark-grey-text" href="#!">Payments</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Shipping</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Cancellation & Returns</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">FAQ</a>
+					</p>
+
+				</div>
+				<!-- Grid column -->
+
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">Contact</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 60px;">
+					<p>
+						<i class="fas fa-home mr-3"></i> Issaquah, WA 98027, US
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3"></i> info@pawsco.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3"></i> (555) 555-5555
+					</p>
+					<p>
+						<i class="fas fa-print mr-3"></i> (555) 555-5556
+					</p>
+
+				</div>
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+		<!-- Footer Links -->
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center text-black-50 py-3">
+			© 2020 Copyright: <a class="dark-grey-text" href="#!">Pawsco
+				Wholesale Corporation</a>. All rights reserved.
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+	<script src="../Javascript/home.js"></script>
+</body>
+</html>
