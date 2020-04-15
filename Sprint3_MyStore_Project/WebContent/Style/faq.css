@@ -1,0 +1,7 @@
+.jumbotron {
+	background-image: url("../Image/dogjumbotron.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.75;
+}
