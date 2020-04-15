@@ -4,14 +4,11 @@ h2, p{
 	color: black;
 }
 
-#myaccount{
-	
+#myaccount {
 	position: absolute;
-	color: white;
-  	right: 0px;
-  	width: 300px;
-  	padding: 10px;
-	
+	right: 0px;
+	width: 300px;
+	padding: 10px;
 }
 .homeNav{
 	position: absolute;
@@ -27,11 +24,11 @@ h2, p{
 	padding: 10px;
 }
 
-
-#cart{
+#cart {
 	position: absolute;
-  	right: 0px;
-  	width: 150px;
-  	padding: 10px;
+	right: -300px;
+	width: 120px;
+	padding: 10px;
 }
+
 
