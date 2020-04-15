@@ -57,15 +57,15 @@ $(document).ready(function() {
 			cartTable = cartTable.concat(
 							`<tr>
 								<td colspan="4" class="text-right">Subtotal</td>
-								<td>$${orderTotal.toFixed(2)}</td>
+								<td id="subtotal">$${orderTotal.toFixed(2)}</td>
 							</tr>
 							<tr>
 								<td colspan="4" class="text-right">Tax</td>
-								<td>$${tax}</td>
+								<td id="tax">$${tax}</td>
 							</tr>
 							<tr>
 								<td colspan="4" class="text-right"><strong>Total</strong></td>
-								<td>$${(orderTotal + tax).toFixed(2)}</td>
+								<td id="total">$${(orderTotal + tax).toFixed(2)}</td>
 							</tr>
 						</tbody>
 					</table>`);
@@ -89,5 +89,19 @@ $(document).ready(function() {
 		cart.splice(i, 1);
 		sessionStorage.setItem("cart", JSON.stringify(cart));
 		location.reload();
+	});
+	
+	$("#btnNext").click(function(e) {
+		e.preventDefault();
+		var subtotal = $("#subtotal").html();
+		var tax = $("#tax").html();
+		var total = $("#total").html();
+		var totals = {
+			subtotal:subtotal,
+			tax:tax,
+			total:total
+		};
+		sessionStorage.setItem("totals", JSON.stringify(totals));
+		location.href = "checkout.html";
 	});
 });
