@@ -6,6 +6,13 @@
 	width: 300px;
 	padding: 10px;
 }
+.homeNav{
+	position: absolute;
+	right: -580px;
+	width: 120px;
+	padding: 10px;
+	
+}
 .btn-group{
 	position: absolute;
 	right: 180px;
