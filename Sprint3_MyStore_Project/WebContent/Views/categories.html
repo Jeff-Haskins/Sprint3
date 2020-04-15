@@ -22,7 +22,7 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
-	
+
 <script>
 	$(document).ready(function() {
 		$(".card").click(function() {
@@ -38,51 +38,57 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	
-		<a class="navbar-brand" href="home.html">
-		<img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
-		
+
+		<a class="navbar-brand" href="home.html"> <img
+			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
+
 		<!-- Search Bar Form -->
 		<form class="form-inline my-2 my-lg-0" action="products.html">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search" id="searchProductInput">
-				<button class="btn btn-primary my-2 my-sm-0" type="submit"  id="searchButton">Search</button>
+			<input class="form-control mr-sm-2" type="search"
+				placeholder="Search" aria-label="Search" id="searchProductInput">
+			<button class="btn btn-primary my-2 my-sm-0" type="submit"
+				id="searchButton">Search</button>
 		</form>
-		
+
 		<!-- 		MyAccount button that will redirect to the My Account page -->
 		<div class="btn-group">
-  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
-  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
-  
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
-						<a class="dropdown-item" href="#">Orders</a> 
-						<a class="dropdown-item" href="#">Wishlist</a>
-						<a class="dropdown-item" href="#">Logout</a> 
-					</div>
-		</div>
-		
-		<!-- MyCart button to see what is in your cart -->
-		<a id="cart" href="myCart.html">
-			<input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
-		</a>
- <!-- Nav tag for second level selections for categories and home button -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button type="button"
+				class="MyAccountBtn btn btn-primary dropdown-toggle"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
+				Account</button>
 
-		
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li id="home" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				
-				<!-- Products button that will redirect to the products page -->
-				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px">
-					<a class="nav-link" href="products.html">Products</a>
-				</li>
-			</ul>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+				<a class="dropdown-item" href="#">Orders</a> <a
+					class="dropdown-item" href="#">Wishlist</a> <a
+					class="dropdown-item" href="#">Logout</a>
+			</div>
 		</div>
-	</nav>
+
+		<!-- MyCart button to see what is in your cart -->
+		<a id="cart" href="myCart.html"> <input type="image"
+			src="../images/cart.png" alt="Submit" width="24" height="24">
+		</a>
+		<!-- Nav tag for second level selections for categories and home button -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+			<div class="homeNav collapse navbar-collapse"
+				id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li id="home" class="btn btn-outline-primary waves-effect"
+						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
+						class="nav-link" href="#">Home <span class="sr-only">(current)</span>
+					</a></li>
+
+					<!-- Products button that will redirect to the products page -->
+					<li id="product" class="btn btn-outline-primary waves-effect"
+						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
+						<a class="nav-link" href="products.html">Products</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</nav>
 
 
@@ -137,38 +143,39 @@
 					<!-- Grid column -->
 					<div
 						class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-						<h6 class="mb-0" style="color: white">Get connected with us on social networks!</h6>
+						<h6 class="mb-0" style="color: white">Get connected with us
+							on social networks!</h6>
 					</div>
 					<!-- Grid column -->
 
 					<!-- Grid column -->
 					<div class="col-md-6 col-lg-7 text-center text-md-right"
-					style="color: white">
+						style="color: white">
 
 						<!-- Facebook -->
-						<a class="fb-ic" href="http://www.facebook.com" 
-						style="color:inherit; text-decoration:none"> <i class="fab fa-facebook-f white-text mr-4">
-						</i>
+						<a class="fb-ic" href="http://www.facebook.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-facebook-f white-text mr-4"> </i>
 						</a>
 						<!-- Twitter -->
 						<a class="tw-ic" href="http://www.twitter.com"
-						style="color:inherit; text-decoration:none"> <i class="fab fa-twitter white-text mr-4">
-						</i>
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-twitter white-text mr-4"> </i>
 						</a>
 						<!-- Youtube -->
-						<a class="gplus-ic" href="http://www.youtube.com" 
-						style="color:inherit; text-decoration:none"> <i
+						<a class="gplus-ic" href="http://www.youtube.com"
+							style="color: inherit; text-decoration: none"> <i
 							class="fab fa-youtube white-text mr-4"> </i>
 						</a>
 						<!--Linkedin -->
-						<a class="li-ic" href="http://www.linkedin.com" 
-						style="color:inherit; text-decoration:none"> <i
+						<a class="li-ic" href="http://www.linkedin.com"
+							style="color: inherit; text-decoration: none"> <i
 							class="fab fa-linkedin-in white-text mr-4"> </i>
 						</a>
 						<!--Instagram-->
-						<a class="ins-ic" href="http://www.instagram.com" 
-						style="color:inherit; text-decoration:none"> <i class="fab fa-instagram white-text">
-						</i>
+						<a class="ins-ic" href="http://www.instagram.com"
+							style="color: inherit; text-decoration: none"> <i
+							class="fab fa-instagram white-text"> </i>
 						</a>
 
 					</div>

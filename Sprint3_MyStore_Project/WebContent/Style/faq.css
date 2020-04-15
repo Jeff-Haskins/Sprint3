@@ -1,3 +1,10 @@
+.homeNav{
+	position: absolute;
+	right: 0px;
+	width: 120px;
+	padding: 10px;
+	
+}
 .jumbotron {
 	background-image: url("../Image/dogjumbotron.jpg");
 	background-size: cover;
@@ -5,3 +12,4 @@
 	background-position: center;
 	opacity: 0.75;
 }
+
