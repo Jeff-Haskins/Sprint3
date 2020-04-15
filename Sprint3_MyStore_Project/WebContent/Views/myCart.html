@@ -5,6 +5,7 @@
 <title>Shopping Cart</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link href="../Style/home.css" rel="stylesheet" type="text/css" />
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -21,14 +22,22 @@
 		<!-- Search Bar Form -->
 		<form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="search"
-				placeholder="Search" aria-label="Search">
-			<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+				placeholder="Search" aria-label="Search" id="searchProductInput">
+			<button class="btn btn-primary my-2 my-sm-0" id="searchButton" type="submit">Search</button>
 		</form>
 
-		<!-- MyAccount button that will redirect to the My Account page -->
-		<a id="myaccount" href="myAccount.html">
-			<button class="btn btn-primary my-2 my-sm-0" type="button">MyAccount</button>
-		</a>
+		<!-- 		MyAccount button that will redirect to the My Account page -->
+		<div class="btn-group">
+  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
+  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
+  
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+						<a class="dropdown-item" href="#">Orders</a> 
+						<a class="dropdown-item" href="wishlist.html">Wishlist</a>
+						<a class="dropdown-item" href="#">Logout</a> 
+					</div>
+		</div>
 
 		<!-- MyCart button to see what is in your cart -->
 		<a id="cart" href="myCart.html"> <input type="image"

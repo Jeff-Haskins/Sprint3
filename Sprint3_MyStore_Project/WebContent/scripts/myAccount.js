@@ -15,3 +15,7 @@ function getFormData() {
 	  + "<br>" + "Last Name: " + x.elements[1].value + "<br>" + "Email: " + x.elements[2].value;*/
 	  document.getElementById("profile").innerHTML = "First Name: Jordan" + "<br>" + "Last Name: Johnston" + "<br>" + "Email: jordan@gmail.com";
 };
+
+function showHideWishList(){
+	$("div").filter(".wishList").toggle();
+};
