@@ -74,10 +74,24 @@
 				</a></li>
 
 				<!-- Products button that will redirect to the products page -->
+				
+				
 				<li id="product" class="btn btn-outline-primary waves-effect"
 					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
 					class="nav-link" href="products.html">Products</a></li>
 				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
+				<li id="price" class=".nav-item dropdown"><a
+					class="nav-link dropdown-toggle btn btn-success" href="#"
+					id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> Price </a>
+				
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#" id="lessThanFive">Less than $5</a>
+						<a class="dropdown-item" href="#" id="tenToTwenty">$10-$20</a> 
+						<a class="dropdown-item" href="#" id="twentyToFifty">$20-$50</a>
+						<a class="dropdown-item" href="#" id="fiftyToOneHundred">$50-$100</a> 
+					</div></li>
+				
 				<li id="filter" class=".nav-item dropdown"><a
 					class="nav-link dropdown-toggle btn btn-success" href="#"
 					id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -95,6 +109,7 @@
 	</nav>
 
 	<div class="container">
+	
 		<div class="dog-food row row-cols-1 row-cols-md-3" >
 			<div class="col mb-4">
 				<div class="card h-100 item-card" id="product1">
