@@ -49,17 +49,15 @@ $(document).ready(function() {
 			var qty = parseInt(prodDiv.find("#quantity").val());
 			var img = prodDiv.parent().parent().find("img").attr("src");
 			
-			var cart = JSON.parse(sessionStorage.getItem("wishlist"));
+			var wishlist = JSON.parse(sessionStorage.getItem("wishlist"));
 			var exists = false;
 			
-	        if (cart == null) {
-	            cart = [];
+	        if (wishlist == null) {
+	            wishlist = [];
 	        } else {
-	        	cart.forEach(product => {
+	        	wishlist.forEach(product => {
 	        		if (product.name == name) {
 	        			exists = true;
-	        			product.qty += qty;
-	        			sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
 	        		}
 	        	});
 	        }
@@ -71,8 +69,9 @@ $(document).ready(function() {
 	    			qty:qty,
 	    			img:img
 	    		};
-	    		cart.push(item);
-	    		sessionStorage.setItem("wishlist", JSON.stringify(cart));
+	    		
+	    		wishlist.push(item);
+	    		sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
 	    	}
 	        
 	        window.location.href = "wishlist.html";

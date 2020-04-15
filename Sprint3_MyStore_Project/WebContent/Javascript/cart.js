@@ -10,7 +10,8 @@ $(document).ready(function() {
 			$("#btnNext").hide();
 		} else {
 			var cartTable = 
-				`<table class="table">
+				`<br><h4 style="text-align:center">Your Shopping Cart</h4><br>
+				<table class="table">
 					<thead>
 						<tr>
 							<th></th>
