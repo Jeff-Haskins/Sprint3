@@ -23,7 +23,8 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
-	<script src="../Javascript/temp.js"></script>
+<script src="../Javascript/temp.js"></script>
+
 
 </head>
 <body>
@@ -38,20 +39,23 @@
 		<form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="search"
 				placeholder="Search" aria-label="Search" id="searchProductInput">
-			<button class="btn btn-primary my-2 my-sm-0" id="searchButton" type="submit">Search</button>
+			<button class="btn btn-primary my-2 my-sm-0" id="searchButton"
+				type="submit">Search</button>
 		</form>
 
 		<!-- 		MyAccount button that will redirect to the My Account page -->
 		<div class="btn-group">
-  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
-  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
-  
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
-						<a class="dropdown-item" href="#">Orders</a> 
-						<a class="dropdown-item" href="#">Wishlist</a>
-						<a class="dropdown-item" href="#">Logout</a> 
-					</div>
+			<button type="button"
+				class="MyAccountBtn btn btn-primary dropdown-toggle"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
+				Account</button>
+
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+				<a class="dropdown-item" href="#">Orders</a> <a id="wishlist"
+					class="wishList dropdown-item" href="#">Wishlist</a> <a
+					class="dropdown-item" href="#">Logout</a>
+			</div>
 		</div>
 
 		<!-- MyCart button to see what is in your cart -->
@@ -83,19 +87,20 @@
 					id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Filter </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#" onclick="showAll();">Show All</a>
-						<a class="dropdown-item" href="#" onclick="showFood();">Food</a> 
-						<a class="dropdown-item" href="#" onclick="showToys();">Toys</a>
-						<a class="dropdown-item" href="#" onclick="showFurniture();">Beds & Furniture</a> 
-						<a class="dropdown-item" href="#" onclick="showGrooming();">Grooming</a> 
-						<a class="dropdown-item" href="#" onclick="showApparel();">Apparel</a>
+						<a class="dropdown-item" href="#" onclick="showAll();">Show
+							All</a> <a class="dropdown-item" href="#" onclick="showFood();">Food</a>
+						<a class="dropdown-item" href="#" onclick="showToys();">Toys</a> <a
+							class="dropdown-item" href="#" onclick="showFurniture();">Beds
+							& Furniture</a> <a class="dropdown-item" href="#"
+							onclick="showGrooming();">Grooming</a> <a class="dropdown-item"
+							href="#" onclick="showApparel();">Apparel</a>
 					</div></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container">
-		<div class="dog-food row row-cols-1 row-cols-md-3" >
+		<div class="dog-food row row-cols-1 row-cols-md-3">
 			<div class="col mb-4">
 				<div class="card h-100 item-card" id="product1">
 					<!--Card image-->
@@ -116,8 +121,9 @@
 							<h4 class="price">$74.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -160,8 +166,9 @@
 							<h4 class="price">$3.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -194,12 +201,14 @@
 					<div class="card-body">
 						<div class="collapse-content">
 							<!--Title-->
-							<h4 class="card-title">Kirkland Signature Dental Chews, 72-count</h4>
+							<h4 class="card-title">Kirkland Signature Dental Chews,
+								72-count</h4>
 							<h4 class="price">$19.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -241,9 +250,12 @@
 							<h4 class="price">$9.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-                  name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
-									value="Add To Cart">
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
+									value="Add To Cart"> <input type="submit" id="wishlist"
+									class="wishlistBtn btn btn-outline-primary waves-effect"
+									value="+Wish List">
 							</form>
 							<!--Text-->
 							<p class="card-text collapse" id="collapseContent4">The KONG
@@ -281,12 +293,14 @@
 					<div class="card-body">
 						<div class="collapse-content">
 							<!--Title-->
-							<h4 class="card-title">STAR WARS Darth Vader Rope Dog Toy, Large</h4>
+							<h4 class="card-title">STAR WARS Darth Vader Rope Dog Toy,
+								Large</h4>
 							<h4 class="price">$11.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -324,8 +338,9 @@
 							<h4 class="price">$6.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -366,8 +381,9 @@
 							<h4 class="price">$49.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -406,8 +422,9 @@
 							<h4 class="price">$29.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -445,8 +462,9 @@
 							<h4 class="price">$89.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -490,8 +508,9 @@
 							<h4 class="price">$4.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -533,8 +552,9 @@
 							<h4 class="price">$7.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -578,8 +598,9 @@
 							<h4 class="price">$4.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -620,8 +641,9 @@
 							<h4 class="price">$19.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -665,8 +687,9 @@
 							<h4 class="price">$14.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 
@@ -704,8 +727,9 @@
 							<h4 class="price">$21.99</h4>
 							<form>
 								<label for="qty">Qty</label> <input type="number" id="quantity"
-									name="quantity" min="1" max="10" value="1"> <input type="submit"
-									class="btn btn-outline-primary waves-effect"
+									name="quantity" min="1" max="10" value="1"> <input
+									type="submit"
+									class="cartBtn btn btn-outline-primary waves-effect"
 									value="Add To Cart">
 							</form>
 							<!--Text-->
@@ -729,6 +753,6 @@
 			</div>
 		</div>
 	</div>
-<script src="../Javascript/product.js"></script>
+	<script src="../Javascript/product.js"></script>
 </body>
 </html>
