@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("input:submit").click(function(e) {
+	$(".cartBtn").click(function(e) {
 		e.preventDefault();
 		
 		var prodDiv = $(this).parent().parent();
@@ -37,3 +37,44 @@ $(document).ready(function() {
         window.location.href = "myCart.html";
 	});
 });
+
+
+	$(document).ready(function() {
+		$(".wishlistBtn").click(function(e) {
+			e.preventDefault();
+			
+			var prodDiv = $(this).parent().parent();
+			var name = prodDiv.find(".card-title").html();
+			var price = prodDiv.find(".price").html().replace('$', '');
+			var qty = parseInt(prodDiv.find("#quantity").val());
+			var img = prodDiv.parent().parent().find("img").attr("src");
+			
+			var cart = JSON.parse(sessionStorage.getItem("wishlist"));
+			var exists = false;
+			
+	        if (cart == null) {
+	            cart = [];
+	        } else {
+	        	cart.forEach(product => {
+	        		if (product.name == name) {
+	        			exists = true;
+	        			product.qty += qty;
+	        			sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
+	        		}
+	        	});
+	        }
+	        
+	        if (!exists) {
+	    		var item = {
+	    			name:name,
+	    			price:price,
+	    			qty:qty,
+	    			img:img
+	    		};
+	    		cart.push(item);
+	    		sessionStorage.setItem("wishlist", JSON.stringify(cart));
+	    	}
+	        
+	        window.location.href = "wishlist.html";
+		});
+	});

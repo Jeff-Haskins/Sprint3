@@ -64,7 +64,7 @@ $(document).ready(function() {
 		var qty = 1;
 		var img = div.find("img").attr("src");
 		
-		var cart = JSON.parse(sessionStorage.getItem("cart"));
+		var cart = JSON.parse(sessionStorage.getItem("wishlist"));
 		var exists = false;
 		
         if (cart == null) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
         		if (product.name == name) {
         			exists = true;
         			product.qty += qty;
-        			sessionStorage.setItem("cart", JSON.stringify(cart));
+        			sessionStorage.setItem("wishlist", JSON.stringify(cart));
         		}
         	});
         }
@@ -87,10 +87,10 @@ $(document).ready(function() {
     			img:img
     		};
     		cart.push(item);
-    		sessionStorage.setItem("cart", JSON.stringify(cart));
+    		sessionStorage.setItem("wishlist", JSON.stringify(cart));
     	}
         
-        window.location.href = "myCart.html";
+        window.location.href = "wishlist.html";
 	});
 	
 	$("#test").click(function() {

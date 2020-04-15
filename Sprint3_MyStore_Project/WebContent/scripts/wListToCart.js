@@ -6,7 +6,7 @@ $(document).ready(function() {
 		var name = prodDiv.find(".card-title").html();
 		var price = prodDiv.find(".price").html().replace('$', '');
 		var qty = parseInt(prodDiv.find("#quantity").val());
-		var img = prodDiv.parent().siblings(".card-img-top").find("img").attr("src");
+		var img = prodDiv.closest(".view").find("img").attr("src");
 		  alert(img);
 		var cart = JSON.parse(sessionStorage.getItem("cart"));
 		var exists = false;
