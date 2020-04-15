@@ -20,6 +20,14 @@ p#profile {
 	font-family: "Lucida Console", Courier, monospace;
 }
 
+.homeNav{
+	position: absolute;
+	right: -580px;
+	width: 120px;
+	padding: 10px;
+	
+}
+
 .btn-group{
 	position: absolute;
 	right: 180px;
