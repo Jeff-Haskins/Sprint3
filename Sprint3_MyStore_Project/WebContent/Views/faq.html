@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Frequently Asked Questions</title>
 <link href="../Style/faq.css" rel="stylesheet" type="text/css" />
 <link href="../Style/home.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet"
@@ -27,24 +27,55 @@
 	<!-- Nav bar for search bar, my account button, and shopping cart button -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-		<a class="navbar-brand" href="home.html"> <img
-			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
+<!-- Nav bar for search bar, my account button, and shopping cart button -->
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;" id="navcolor">
+	
+		<a class="navbar-brand" href="home.html">
+		<img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
+		
+		<!-- Search Bar Form -->
+		<form class="form-inline my-2 my-lg-0" action="products.html">
+				<input class="form-control mr-sm-2" type="search"
+					placeholder="Search" aria-label="Search" id="searchProductInput">
+				<button class="btn btn-primary my-2 my-sm-0" type="submit"  id="searchButton">Search</button>
+		</form>
+		
+		<!-- 		MyAccount button that will redirect to the My Account page -->
+		<div class="btn-group">
+  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
+  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
+  
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+						<a class="dropdown-item" href="#">Orders</a> 
+						<a class="dropdown-item" href="#">Wishlist</a>
+						<a class="dropdown-item" href="#">Logout</a> 
+					</div>
+		</div>
+		
+		<!-- MyCart button to see what is in your cart -->
+		<a id="cart" href="myCart.html">
+			<input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
+		</a>
+ <!-- Nav tag for second level selections for categories and home button -->
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
 
-		<!-- Nav tag for second level selections for categories and home button -->
-		<nav class="homeNav navbar navbar-expand-lg navbar-light bg-light">
-
-
-			<div class="homeNav collapse navbar-collapse"
-				id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li id="home" class="btn btn-outline-primary waves-effect"
-						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
-						class="nav-link" href="#">Home <span class="sr-only">(current)</span>
-					</a></li>
-				</ul>
-			</div>
-		</nav>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li id="home" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				
+				<!-- Products button that will redirect to the products page -->
+				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px">
+					<a class="nav-link" href="products.html">Products</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
+	</nav>
+    
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
 			<h1 class="display-4">Frequently Asked Questions</h1>
@@ -223,23 +254,23 @@
 						<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 							style="width: 60px;">
 						<p>
-							<a class="dark-grey-text" href="#!">About Us</a>
-						</p>
-						<p>
-							<a class="dark-grey-text" href="#!">Careers</a>
-						</p>
-						<p>
-							<a class="dark-grey-text" href="#!">User Stories</a>
-						</p>
-						<p>
-							<a class="dark-grey-text" href="#!">Testimonials</a>
-						</p>
-						<p>
-							<a class="dark-grey-text" href="#!">Press</a>
-						</p>
-						<p>
-							<a class="dark-grey-text" href="#!">Photos</a>
-						</p>
+						<a class="dark-grey-text" href="aboutus.html">About Us</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="careers.html">Careers</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="userstories.html">User Stories</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="testimonials.html">Testimonials</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="press.html">Press</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="photos.html">Photos</a>
+					</p>
 
 					</div>
 					<!-- Grid column -->
@@ -252,13 +283,13 @@
 						<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 							style="width: 60px;">
 						<p>
-							<a class="dark-grey-text" href="#!">Payments</a>
+							<a class="dark-grey-text" href="payments.html">Payments</a>
 						</p>
 						<p>
-							<a class="dark-grey-text" href="#!">Shipping</a>
+							<a class="dark-grey-text" href="shipping.html">Shipping</a>
 						</p>
 						<p>
-							<a class="dark-grey-text" href="#!">Cancellation & Returns</a>
+							<a class="dark-grey-text" href="cancellation&return.html">Cancellation & Returns</a>
 						</p>
 						<p>
 							<a class="dark-grey-text" href="faq.html">FAQ</a>
