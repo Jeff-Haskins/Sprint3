@@ -6,10 +6,12 @@
 	
 }
 .jumbotron {
-	background-image: url("../Image/dogjumbotron.jpg");
+	content: url("../Image/dogjumbotron.jpg");
 	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	width: 40%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	opacity: 0.75;
 }
 
