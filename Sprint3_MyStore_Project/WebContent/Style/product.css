@@ -22,8 +22,8 @@
 
 #cart {
 	position: absolute;
-	right: 0px;
-	width: 150px;
+	right: -300px;
+	width: 120px;
 	padding: 10px;
 }
 

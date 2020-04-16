@@ -1,10 +1,29 @@
-#cart{
+#myaccount {
 	position: absolute;
-  	right: 0px;
-  	width: 150px;
-  	padding: 10px;
+	right: 0px;
+	width: 300px;
+	padding: 10px;
+}
+.homeNav{
+	position: absolute;
+	right: -580px;
+	width: 120px;
+	padding: 10px;
+	
+}
+.btn-group{
+	position: absolute;
+	right: 180px;
+	width: 120px;
+	padding: 10px;
 }
 
+#cart {
+	position: absolute;
+	right: -320px;
+	width: 120px;
+	padding: 10px;
+}
 p#profilehead {
 	padding: 10px;
 	outline-style: solid;
@@ -18,21 +37,6 @@ p#profile {
 	outline-style: solid;
 	outline-color: #2D7CEA;
 	font-family: "Lucida Console", Courier, monospace;
-}
-
-.homeNav{
-	position: absolute;
-	right: -580px;
-	width: 120px;
-	padding: 10px;
-	
-}
-
-.btn-group{
-	position: absolute;
-	right: 180px;
-	width: 120px;
-	padding: 10px;
 }
 
 body{margin-top:20px;}
