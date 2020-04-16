@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Frequently Asked Questions</title>
+<title>Insert title here</title>
 <link href="../Style/faq.css" rel="stylesheet" type="text/css" />
 <link href="../Style/home.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet"
@@ -27,55 +27,24 @@
 	<!-- Nav bar for search bar, my account button, and shopping cart button -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-<!-- Nav bar for search bar, my account button, and shopping cart button -->
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;" id="navcolor">
-	
-		<a class="navbar-brand" href="home.html">
-		<img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
-		
-		<!-- Search Bar Form -->
-		<form class="form-inline my-2 my-lg-0" action="products.html">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search" id="searchProductInput">
-				<button class="btn btn-primary my-2 my-sm-0" type="submit"  id="searchButton">Search</button>
-		</form>
-		
-		<!-- 		MyAccount button that will redirect to the My Account page -->
-		<div class="btn-group">
-  			<button type="button" class="MyAccountBtn btn btn-primary dropdown-toggle" 
-  			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
-  
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
-						<a class="dropdown-item" href="#">Orders</a> 
-						<a class="dropdown-item" href="#">Wishlist</a>
-						<a class="dropdown-item" href="#">Logout</a> 
-					</div>
-		</div>
-		
-		<!-- MyCart button to see what is in your cart -->
-		<a id="cart" href="myCart.html">
-			<input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
-		</a>
- <!-- Nav tag for second level selections for categories and home button -->
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
+		<a class="navbar-brand" href="home.html"> <img
+			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
 
-		
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li id="home" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				
-				<!-- Products button that will redirect to the products page -->
-				<li id="product" class="btn btn-outline-primary waves-effect" style="width:80px;height:40px;margin:5px;padding:0px 1px">
-					<a class="nav-link" href="products.html">Products</a>
-				</li>
-			</ul>
-		</div>
+		<!-- Nav tag for second level selections for categories and home button -->
+		<nav class="homeNav navbar navbar-expand-lg navbar-light bg-light">
+
+
+			<div class="homeNav collapse navbar-collapse"
+				id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li id="home" class="btn btn-outline-primary waves-effect"
+						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
+						class="nav-link" href="#">Home <span class="sr-only">(current)</span>
+					</a></li>
+				</ul>
+			</div>
+		</nav>
 	</nav>
-	</nav>
-    
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
 			<h1 class="display-4">Frequently Asked Questions</h1>
@@ -93,7 +62,7 @@
 				</h2>
 			</div>
 
-			<div id="collapseOne" class="collapse show"
+			<div id="collapseOne" class="collapse"
 				aria-labelledby="headingOne" data-parent="#accordionExample">
 				<div class="card-body">We are not a puppy mill. We obey the
 					law.</div>
@@ -121,7 +90,7 @@
 					<button class="btn btn-link collapsed" type="button"
 						data-toggle="collapse" data-target="#collapseThree"
 						aria-expanded="false" aria-controls="collapseThree">Is
-						PawsCo the same as Petsmart & Petco?</button>
+						PawsCo the same as Petsmart &amp; Petco?</button>
 				</h2>
 			</div>
 			<div id="collapseThree" class="collapse"
@@ -130,19 +99,17 @@
 					number 1. Our customers always return.</div>
 			</div>
 		</div>
-	</div>
-	<div class="accordion" id="accordionExample">
 		<div class="card">
 			<div class="card-header" id="headingOne">
 				<h2 class="mb-0">
 					<button class="btn btn-link" type="button" data-toggle="collapse"
-						data-target="#collapseOne" aria-expanded="true"
-						aria-controls="collapseOne">Does PawsCo price match with
+						data-target="#collapseFour" aria-expanded="true"
+						aria-controls="collapseFour">Does PawsCo price match with
 						other retailers?</button>
 				</h2>
 			</div>
 
-			<div id="collapseOne" class="collapse show"
+			<div id="collapseFour" class="collapse"
 				aria-labelledby="headingOne" data-parent="#accordionExample">
 				<div class="card-body">Please rest assured that your
 					satisfaction is our top priority-that's why we're always working to
@@ -155,12 +122,12 @@
 			<div class="card-header" id="headingTwo">
 				<h2 class="mb-0">
 					<button class="btn btn-link collapsed" type="button"
-						data-toggle="collapse" data-target="#collapseTwo"
-						aria-expanded="false" aria-controls="collapseTwo">Is the
+						data-toggle="collapse" data-target="#collapseFive"
+						aria-expanded="false" aria-controls="collapseFive">Is the
 						inventory on PawsCo.com live?</button>
 				</h2>
 			</div>
-			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+			<div id="collapseFive" class="collapse" aria-labelledby="headingTwo"
 				data-parent="#accordionExample">
 				<div class="card-body">The inventory on our website is
 					real-time and updated frequently. If the item you’re looking for is
