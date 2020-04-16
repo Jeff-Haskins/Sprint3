@@ -1,3 +1,10 @@
+.homeNav{
+	position: absolute;
+	right: 0px;
+	width: 120px;
+	padding: 10px;
+	
+}
 .jumbotron {
 	content: url("../Image/dogjumbotron.jpg");
 	background-size: cover;
@@ -7,3 +14,4 @@
 	margin-right: auto;
 	opacity: 0.75;
 }
+
