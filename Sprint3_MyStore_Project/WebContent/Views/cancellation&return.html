@@ -2,12 +2,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome to Pawsco Wholesale</title>
+<title>Cancellation & Returns</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="../Style/home.css" rel="stylesheet" type="text/css" />
+<link href="../Style/cancellation&return.css" rel="stylesheet"
+	type="text/css" />
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -22,11 +23,12 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
-
 </head>
 <body>
+
 	<!-- Nav bar for search bar, my account button, and shopping cart button -->
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
+	<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #3071A9;"
+		id="navcolor">
 
 		<a class="navbar-brand" href="home.html"> <img
 			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
@@ -58,113 +60,156 @@
 		<a id="cart" href="myCart.html"> <input type="image"
 			src="../images/cart.png" alt="Submit" width="24" height="24">
 		</a>
+		<!-- Nav tag for second level selections for categories and home button -->
+		<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #3071A9;">
 
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li id="home" class="btn btn-outline-primary waves-effect"
+						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
+						class="nav-link" href="#">Home <span class="sr-only">(current)</span>
+					</a></li>
+
+					<!-- Products button that will redirect to the products page -->
+					<li id="product" class="btn btn-outline-primary waves-effect"
+						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
+						<a class="nav-link" href="products.html">Products</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</nav>
+	<div id="header">
+		<h3>Cancellation & Returns</h3>
+		<br>
+		<h1>Enjoy <span>free</span> & easy returns</h1><br>
+		<p>For a limited time, returns are not accepted in store. Return
+			windows will be extended to accommodate this temporary change.</p>
+		<br>
+		<p>Risk-Free 100% Satisfaction Guarantee: We guarantee your
+			satisfaction on every product we sell, and will refund your purchase
+			price.</p><br>
+		<h4>Your one stop for returns and cancellation</h4><br>
+	</div>
 
-	<!-- Nav tag for second level selections for categories and home button -->
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
+	<div class="row row-cols-1 row-cols-md-4">
+		<div class="col mb-3"></div>
+		<div class="col mb-3">
+			<!-- Card -->
+			<div class="card">
 
+				<!--Card image-->
+				<div class="view overlay">
+					<img class="card-img-top" src="../Image/dogstore.png"
+						alt="Card image cap"> <a href="#!">
+						<div class="mask rgba-white-slight"></div>
+					</a>
+				</div>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li id="home" class="btn btn-outline-primary waves-effect"
-					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
-					class="nav-link" href="#">Home <span class="sr-only">(current)</span>
-				</a></li>
+				<!--Card content-->
+				<div class="card-body">
 
-				<!-- Products button that will redirect to the products page -->
-				<li id="product" class="btn btn-outline-primary waves-effect"
-					style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
-					<a class="nav-link" href="products.html">Products</a>
-				</li>
-			</ul>
+					<!--Title-->
+					<h4 class="card-title">Returns at a PawsCo Store</h4>
+					<!--Text-->
+					<p class="card-text">Bring your item and return barcode (from
+						your packing slip, order details page, or receipt) to Guest
+						Service. We can also look up receipts using your original payment
+						method. Whatever you choose, a team member will be happy to assist
+						with your return.</p>
+
+				</div>
+
+			</div>
+			<!-- Card -->
 		</div>
-	</nav>
+		<div class="col mb-3">
+			<!-- Card -->
+			<div class="card">
 
-	<div style="text-align: center">
-		<div style="width: 80%; display: inline-block; text-align: left">
-			<br>
-			<br>
-			<h4>Did You Know?</h4>
-			Pawsco Wholesale is a multi-billion dollar global retailer with
-			warehouse club operations in eight countries. We are the recognized
-			leader in our field, dedicated to quality in every area of our
-			business and respected for our outstanding business ethics. Despite
-			our large size and explosive international expansion, we continue to
-			provide a family atmosphere in which our employees thrive and
-			succeed. We are proud to have been named by Washington CEO Magazine
-			as one of the top three companies to work for in the state of
-			Washington.<br>
-			<br>
-			<hr>
+				<!--Card image-->
+				<div class="view overlay">
+					<img class="card-img-top" src="../Image/return.jpg"
+						alt="Card image cap"> <a href="#!">
+						<div class="mask rgba-white-slight"></div>
+					</a>
+				</div>
 
-			<h4>What Is Pawsco?</h4>
-			Pawsco is a membership warehouse club, dedicated to bringing our
-			members the best possible prices on quality brand-name pet merchandise.
-			With hundreds of locations worldwide, Pawsco provides a wide
-			selection of merchandise, plus the convenience of specialty
-			departments and exclusive member services, all designed to make your
-			shopping experience a pleasurable one.<br>
-			<br>
+				<!--Card content-->
+				<div class="card-body">
 
-			<hr>
+					<!--Title-->
+					<h4 class="card-title">Return by mail</h4>
+					<!--Text-->
+					<p class="card-text">You'll get free shipping on every return
+						at Target. View your order details to print a prepaid return
+						mailing label. (You can also keep up to date on the status of your
+						return there.) We'll email you when we get your return to let you
+						know when to expect your refund.</p>
 
-			<h4>The History of Pawsco</h4>
-			The company's first location, opened in 1976 under the Pet Club
-			name, was in a converted airplane hangar on Morena Boulevard in San
-			Diego. Originally serving only small businesses, the company found it
-			could achieve far greater buying clout by also serving a selected
-			audience of non-business members. With that change, the growth of the
-			warehouse club industry was off and running. In 1983, the first
-			Pawsco warehouse location was opened in Seattle. Pawsco became the
-			first company ever to grow from zero to $3 billion in sales in less
-			than six years. When Pawsco and Pet Club merged in 1993, the
-			combined company, operating under the name PetPawsco, had 206
-			locations generating $16 billion in annual sales.<br>
-			<br> Our operating philosophy has been simple. Keep costs down
-			and pass the savings on to our members. Our large membership base and
-			tremendous buying power, combined with our never-ending quest for
-			efficiency, result in the best possible prices for our members. Since
-			resuming the Pawsco name in 1997, the company has grown worldwide
-			with total sales in recent fiscal years exceeding $64 billion. For
-			additional information about Pawsco, download the Pawsco Story in a
-			PDF format to learn more.<br>
-			<br> Pawsco has transformed the retail world. When entrepreneur
-			Sol Price introduced a groundbreaking retail concept in San Diego,
-			California. Pet Club was the world's first membership warehouse
-			club, a place where efficient buying and operating practices gave
-			members access to unmatched savings.<br>
-			<br> At first, Pet Club was limited exclusively to business
-			members, who could purchase a wide range of supplies and wholesale
-			items. Jim Sinegal, the executive vice-president of merchandising,
-			distribution and marketing, was instrumental in fine-tuning the
-			merchandise and marketing strategies, helping to turn Pet Club into
-			a success story that changed the face of retailing worldwide.<br>
-			<br> Seven years later, Jim Sinegal channeled his expertise into
-			co-founding Pawsco Wholesale with Jeff Brotman, and together they
-			opened the first warehouse in Seattle, Washington in 1983.<br>
-			<br> Over the next decade, both Pet Club and Pawsco Wholesale
-			continued to innovate and grow, and in 1993, the two mega-retailers
-			merged, creating a gifted leadership team that soon made Pawsco the
-			world's most successful warehouse club.<br>
-			<br> Today, as the company evolves, it stays true to the
-			qualities that helped attract and retain millions of loyal members
-			around the globe:<br>
-			<br> Commitment to quality. Pawsco warehouses carry about 4,000
-			SKUs (stock keeping units) compared to the 30,000 found at most
-			supermarkets. By carefully choosing products based on quality, price,
-			brand, and features, the company can offer the best value to members.<br>
-			<br> Entrepreneurial spirit. Throughout the decades, the
-			entrepreneurial drive for excellence has continued to define Pawsco
-			staff at every level. From its management team to the people on the
-			warehouse floor, everyone is united in a common goal to exceed member
-			expectations.<br>
-			<br> Employee focus. Pawsco is often noted for being much more
-			employee-focused than other Fortune 500 companies. By offering fair
-			wages and top-notch benefits, the company has created a workplace
-			culture that attracts positive, high-energy, talented employees.<br>
-			<br>
-			<br>
+				</div>
+
+			</div>
+
+			<!-- Card -->
+		</div>
+	</div>
+	<div class="row row-cols-1 row-cols-md-4">
+		<div class="col mb-3"></div>
+		<div class="col mb-3">
+			<!-- Card -->
+			<div class="card">
+
+				<!--Card image-->
+				<div class="view overlay">
+					<img class="card-img-top" src="../Image/receipt.jpeg"
+						alt="Card image cap"> <a href="#!">
+						<div class="mask rgba-white-slight"></div>
+					</a>
+				</div>
+
+				<!--Card content-->
+				<div class="card-body">
+
+					<!--Title-->
+					<h4 class="card-title">Print a receipt</h4>
+					<!--Text-->
+					<p class="card-text">Receipts come in handy when returning
+						items you purchased in store. It's easy to print them from your
+						order details page. Giving a gift? You can print a gift receipt
+						there, too.</p>
+
+				</div>
+
+			</div>
+			<!-- Card -->
+		</div>
+		<div class="col mb-3">
+			<!-- Card -->
+			<div class="card">
+
+				<!--Card image-->
+				<div class="view overlay">
+					<img class="card-img-top" src="../Image/problem.jpeg"
+						alt="Card image cap"> <a href="#!">
+						<div class="mask rgba-white-slight"></div>
+					</a>
+				</div>
+
+				<!--Card content-->
+				<div class="card-body">
+
+					<!--Title-->
+					<h4 class="card-title">Problems with your order?</h4>
+					<!--Text-->
+					<p class="card-text">Save time by fixing it online. We can help
+						with damaged items, missing parts, and more.</p>
+
+				</div>
+
+			</div>
+			<!-- Card -->
 		</div>
 	</div>
 
@@ -286,7 +331,8 @@
 						<a class="dark-grey-text" href="shipping.html">Shipping</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="cancellation&return.html">Cancellation & Returns</a>
+						<a class="dark-grey-text" href="cancellation&return.html">Cancellation
+							& Returns</a>
 					</p>
 					<p>
 						<a class="dark-grey-text" href="faq.html">FAQ</a>

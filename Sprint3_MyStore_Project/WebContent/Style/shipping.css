@@ -1,0 +1,37 @@
+#shipping1 {
+	text-align: center;
+}
+
+#shipping2 {
+	text-align: center;
+	background-color: #acacb0;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding: 1%;
+}
+
+#orderonline {
+	content: url("../Image/orderonline.png");
+	background-size: cover;
+	width: 40%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ordertoday, #ordertoday2 {
+	text-align: center;
+}
+
+.card-title {
+	text-align: center;
+}
+
+#twodayship {
+	content: url("../Image/2dayship.png");
+	background-size: cover;
+	width: 40%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
