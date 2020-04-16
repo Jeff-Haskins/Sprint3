@@ -1,0 +1,6 @@
+.container{
+	margin-left:10%;
+}
+#process, #options{
+    border-bottom: 1px solid black;
+}
