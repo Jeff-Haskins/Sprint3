@@ -7,8 +7,8 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="../Style/myAccount.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../scripts/myAccount.js"></script>
+<link href="${pageContext.request.contextPath}/Style/myAccount.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/myAccount.js"></script>
 
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -26,9 +26,9 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
-<script src="../scripts/wListToCart.js"></script>
-<script src="../Javascript/temp.js"></script>
-<script src="../Javascript/wishlist.js"></script>
+<script src="${pageContext.request.contextPath}/scripts/wListToCart.js"></script>
+<script src="${pageContext.request.contextPath}/Javascript/temp.js"></script>
+<script src="${pageContext.request.contextPath}/Javascript/wishlist.js"></script>
 
 </head>
 <body>

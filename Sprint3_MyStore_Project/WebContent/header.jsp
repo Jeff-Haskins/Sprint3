@@ -43,7 +43,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
                 Account</button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../myAccount.html">Profile</a>
+                <a class="dropdown-item" href="${pageContext.request.contextPath}/myAccount.jsp">Profile</a>
                 <a class="dropdown-item" href="#">Orders</a> <a
                     class="dropdown-item" href="#">Wishlist</a> <a
                     class="dropdown-item" href="#">Logout</a>
