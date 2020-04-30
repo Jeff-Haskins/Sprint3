@@ -103,6 +103,6 @@ $(document).ready(function() {
 		};
 		
 		sessionStorage.setItem("totals", JSON.stringify(totals));
-		location.href = "checkout.html";
+		location.href = "checkout.jsp";
 	});
 });
