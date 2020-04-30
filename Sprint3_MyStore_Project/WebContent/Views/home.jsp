@@ -38,7 +38,7 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<a href="products.html"> <img src="../Image/dogfood.jpg"
+				<a href="products.jsp"> <img src="../Image/dogfood.jpg"
 					class="d-block w-100" style alt="...">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="products.html"> <img src="../Image/dogtoy.jpg"
+				<a href="products.jsp"> <img src="../Image/dogtoy.jpg"
 					class="d-block w-100" alt="...">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="products.html"> <img src="../Image/dogshampoo.jpg"
+				<a href="products.jsp"> <img src="../Image/dogshampoo.jpg"
 					class="d-block w-100" alt="...">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
