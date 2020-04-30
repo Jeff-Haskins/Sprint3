@@ -32,74 +32,7 @@
 
 </head>
 <body>
-	<!-- Nav bar for search bar, my account button, and shopping cart button -->
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
-
-		<a class="navbar-brand" href="home.html"> <img
-			class="navbar-image" src="../images/logo3.png" alt="PawsCo"></a>
-
-		<!-- Search Bar Form -->
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search"
-				placeholder="Search" aria-label="Search">
-			<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-		</form>
-
-		<!-- 		MyAccount button that will redirect to the My Account page -->
-		<div class="btn-group">
-			<button type="button"
-				class="MyAccountBtn btn btn-primary dropdown-toggle"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
-				Account</button>
-
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
-				<a class="dropdown-item" href="#">Orders</a> <a
-					class="dropdown-item" href="wishlist.html">Wishlist</a> <a
-					class="dropdown-item" href="#">Logout</a>
-			</div>
-		</div>
-
-		<!-- MyCart button to see what is in your cart -->
-		<a id="cart" href="myCart.html"> <input type="image"
-			src="../images/cart.png" alt="Submit" width="24" height="24">
-		</a>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
-
-			<div class="homeNav collapse navbar-collapse"
-				id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-				<!-- MyCart button to see what is in your cart -->
-				<li id="cart" class="btn btn-outline-primary waves-effect"
-						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
-						<a class="nav-link" href="myCart.html">Cart</a>
-					</li>
-					<li id="home" class="btn btn-outline-primary waves-effect"
-						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px"><a
-						class="nav-link" href="home.html">Home <span class="sr-only">(current)</span>
-					</a></li>
-
-					<!-- Products button that will redirect to the products page -->
-					<li id="product" class="btn btn-outline-primary waves-effect"
-						style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
-						<a class="nav-link" href="products.html">Products</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</nav>
-
-	<!-- Nav tag for second level selections for categories and home button -->
-
-	<!-- Form for signing up -->
-	<!-- <form id="sign-up"> -->
-	<!--   First name: <input type="text" id="fname" value="Jordan"><br> -->
-	<!--   Last name: <input type="text" id="lname" value="Johnston"><br> -->
-	<!--   Email:   <input type="text" id="email" name="email" value="jordan@gmail.com"><br> -->
-	<!--   <input type="submit" value="Submit"> -->
-	<!-- </form> -->
-
-	<!-- <button onclick="getFormData()">Try it</button> -->
+	<%@ include file="/Views/header.jsp"%>
 
 	<div class="container padding-bottom-3x mb-2">
 		<div class="row">
@@ -282,5 +215,7 @@
 
 		</div>
 	</div>
+	
+	<%@ include file="/Views/footer.jsp"%>
 </body>
 </html>
