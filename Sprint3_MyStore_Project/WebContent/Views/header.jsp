@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;"id="navcolor">
     
         <a class="navbar-brand" href="${pageContext.request.contextPath}/Views/home.jsp">
-        <img class="navbar-image"src="../images/logo3.png" alt="PawsCo"></a>
+        <img class="navbar-image"src="${pageContext.request.contextPath}/images/logo3.png" alt="PawsCo"></a>
         
         <!-- Search Bar Form -->
         <form class=" form-inline my-2 my-lg-0" action="${pageContext.request.contextPath}/Views/products.jsp">
@@ -29,7 +29,7 @@
         
         <!-- MyCart button to see what is in your cart -->
         <a id="cart" href="${pageContext.request.contextPath}/Views/myCart.jsp">
-            <input type="image" src="../images/cart.png" alt="Submit" width="24" height="24">
+            <input type="image" src="${pageContext.request.contextPath}/images/cart.png" alt="Submit" width="24" height="24">
         </a>
  <!-- Nav tag for second level selections for categories and home button -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;">
@@ -62,12 +62,12 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
                 Account</button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+                <a class="dropdown-item" href="${pageContext.request.contextPath}/Views/myAccount.jsp">Profile</a>
                 <a class="dropdown-item" href="#">Orders</a> <a
                     class="dropdown-item" href="#">Wishlist</a> <a
                     class="dropdown-item" href="#">Logout</a>
             </div>
             <!-- MyCart button to see what is in your cart -->
-            <a id="cart" class="nav-link btn btn-danger" href="myCart.html">Cart</a>
+            <a id="cart" class="nav-link btn btn-danger" href="${pageContext.request.contextPath}/Views/myCart.jsp">Cart</a>
         </div>
     </nav>

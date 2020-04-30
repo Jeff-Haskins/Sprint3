@@ -28,8 +28,8 @@
 
 	<%@ include file="/Views/header.jsp"%>
 
-	<div id="carouselExampleCaptions" class="carousel slide"
-		data-ride="carousel">
+	<div id="carouselExampleCaptions" class="carousel slide mx-auto d-block"
+		data-ride="carousel" style="width:60%;">
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleCaptions" data-slide-to="0"
 				class="active"></li>
@@ -38,8 +38,8 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<a href="products.jsp"> <img src="../Image/dogfood.jpg"
-					class="d-block w-100" style alt="...">
+				<a href="${pageContext.request.contextPath}/Views/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogfood.jpg"
+					class="d-block w-100" style alt="..." style="width:auto;">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
 					<h2>NULO FOR DOGS</h2>
@@ -47,8 +47,8 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="products.jsp"> <img src="../Image/dogtoy.jpg"
-					class="d-block w-100" alt="...">
+				<a href="${pageContext.request.contextPath}/Views/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogtoy.jpg"
+					class="d-block w-100" alt="..." style="width:auto; height:570px">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
 					<h2>KONG</h2>
@@ -56,8 +56,8 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="products.jsp"> <img src="../Image/dogshampoo.jpg"
-					class="d-block w-100" alt="...">
+				<a href="${pageContext.request.contextPath}/Views/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogshampoo.jpg"
+					class="d-block w-100" alt="..." style="width:auto; height:570px">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
 					<h2>Burt's Bee Shampoo</h2>
