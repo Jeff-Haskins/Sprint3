@@ -74,6 +74,6 @@ $(document).ready(function() {
 	    		sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
 	    	}
 	        
-	        window.location.href = "wishlist.html";
+	        window.location.href = "wishlist.jsp";
 		});
 	});
