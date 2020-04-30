@@ -82,22 +82,22 @@
 					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 						style="width: 60px;">
 					<p>
-						<a class="dark-grey-text" href="aboutus.html">About Us</a>
+						<a class="dark-grey-text" href="Views/aboutus.jsp">About Us</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="careers.html">Careers</a>
+						<a class="dark-grey-text" href="Views/careers.jsp">Careers</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="userstories.html">User Stories</a>
+						<a class="dark-grey-text" href="Views/userstories.jsp">User Stories</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="testimonials.html">Testimonials</a>
+						<a class="dark-grey-text" href="Views/testimonials.jsp">Testimonials</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="press.html">Press</a>
+						<a class="dark-grey-text" href="Views/press.jsp">Press</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="photos.html">Photos</a>
+						<a class="dark-grey-text" href="Views/photos.jsp">Photos</a>
 					</p>
 
 				</div>
@@ -111,16 +111,16 @@
 					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 						style="width: 60px;">
 					<p>
-						<a class="dark-grey-text" href="payments.html">Payments</a>
+						<a class="dark-grey-text" href="Views/payments.jsp">Payments</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="shipping.html">Shipping</a>
+						<a class="dark-grey-text" href="Views/shipping.jsp">Shipping</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="cancellation&return.html">Cancellation & Returns</a>
+						<a class="dark-grey-text" href="Views/cancellation&return.jsp">Cancellation & Returns</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="faq.html">FAQ</a>
+						<a class="dark-grey-text" href="Views/faq.jsp">FAQ</a>
 					</p>
 
 				</div>
@@ -157,7 +157,7 @@
 
 		<!-- Copyright -->
 		<div class="footer-copyright text-center text-black-50 py-3">
-			Â© 2020 Copyright: <a class="dark-grey-text" href="#!">Pawsco
+			© 2020 Copyright: <a class="dark-grey-text" href="#!">Pawsco
 				Wholesale Corporation</a>. All rights reserved.
 		</div>
 		<!-- Copyright -->
