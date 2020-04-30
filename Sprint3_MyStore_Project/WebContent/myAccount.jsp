@@ -32,7 +32,7 @@
 
 </head>
 <body>
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div class="container padding-bottom-3x mb-2">
 		<div class="row">
@@ -216,6 +216,6 @@
 		</div>
 	</div>
 	
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 </body>
 </html>

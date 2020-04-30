@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Testimonials</title>
+<title>Press</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link href="../Style/home.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -12,17 +12,17 @@
 
 </head>
 <body>
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div style="text-align: center">
-		<br><h3>Testimonials</h3><br>
+		<br><h3>Press</h3><br>
 		<div style="width: 80%; display: inline-block; text-align: left">
 			
 			<br><br>
 		</div>
 	</div>
 
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 	
 	<script src="../Javascript/home.js"></script>
 </body>

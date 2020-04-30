@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="../Style/product.css" rel="stylesheet" type="text/css" />
+
 <script type="text/javascript" src="../scripts/filter.js"></script>
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 	<div>
 		<div id="price" class=".nav-item dropdown" style="width: 5%">
 			<a class="nav-link dropdown-toggle btn btn-success" href="#"
@@ -758,7 +758,7 @@
 			</div>
 		</div>
 
-		<%@ include file="/Views/footer.jsp"%>
+		<%@ include file="/footer.jsp"%>
 
 		<script src="../Javascript/product.js"></script>
 		<script src="../Javascript/home.js"></script>

@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div style="text-align: center">
 		<br><h3>Careers</h3><br>
@@ -154,7 +154,7 @@
 		</div>
 	</div>
 
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 	<script src="../Javascript/home.js"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@
 </head>
 <body>
 
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 	
 	<div id="header">
 		<h3>Cancellation & Returns</h3>
@@ -161,7 +161,7 @@
 		</div>
 	</div>
 
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 	
 </body>
 </html>

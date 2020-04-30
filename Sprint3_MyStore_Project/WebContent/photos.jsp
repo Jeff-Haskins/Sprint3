@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	<%@ include file="/Views/header.jsp"%>		
+	<%@ include file="/header.jsp"%>		
 	<div style="text-align: center">
 		<br>
 		<h3>Photos</h3>
@@ -53,7 +53,7 @@
 		</a>
 			</div> <br> <br>
 			</div>
-			</div> <%@ include file="/Views/footer.jsp"%> <script
+			</div> <%@ include file="/footer.jsp"%> <script
 				src="../Javascript/home.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 <title>Checkout</title>
 </head>
 <body class="bg-light">
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div class="container">
 		<h3 style="text-align: center">Checkout</h3>
@@ -493,7 +493,7 @@
 		</div>
 	</div>
 
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Wishlist</title>
+<title>User Stories</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link href="../Style/home.css" rel="stylesheet" type="text/css" />
@@ -13,30 +13,26 @@
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="../Javascript/wishlist.js"></script>
 
 </head>
 <body>
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
-	<div class="container bootstrap snippet" style="padding-bottom: 40px">
-		<div class="col-md-9 col-sm-8 content">
+	<div style="text-align: center">
+		<br><h3>User Stories</h3><br>
+		<div style="width: 80%; display: inline-block; text-align: left">
+			<hr>
+			<h5>
+				<i>"Pawsco is great."</i>
+			</h5>
+			<br>-Literally Everybody, 2020
+			<hr>
 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel panel-info panel-shadow">
-						<div class="panel-body">
-							<div class="table-responsive" id="wishlistDiv"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<br> <br>
 		</div>
 	</div>
-	<!-- 	<button id="test">TEST</button> -->
 
-
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 	
 	<script src="../Javascript/home.js"></script>
 </body>

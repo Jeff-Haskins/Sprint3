@@ -25,7 +25,7 @@
 </head>
 <body>
 
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div id="shipping1">
 		<h3>Shipping & Order Services</h3>
@@ -139,6 +139,6 @@
 	
 	</div>
 	
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 </body>
 </html>

@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="../Style/home.css" rel="stylesheet" type="text/css" />
+
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -26,7 +26,7 @@
 </head>
 <body>
 
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 	<div id="carouselExampleCaptions" class="carousel slide"
 		data-ride="carousel">
@@ -38,7 +38,7 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<a href="products.jsp"> <img src="../Image/dogfood.jpg"
+				<a href="products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogfood.jpg"
 					class="d-block w-100" style alt="...">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="products.jsp"> <img src="../Image/dogtoy.jpg"
+				<a href="products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogtoy.jpg"
 					class="d-block w-100" alt="...">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="products.jsp"> <img src="../Image/dogshampoo.jpg"
+				<a href="products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogshampoo.jpg"
 					class="d-block w-100" alt="...">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -76,7 +76,7 @@
 		</a>
 	</div>
 
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 
 	<script src="../Javascript/home.js"></script>
 </body>

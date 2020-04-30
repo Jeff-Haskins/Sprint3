@@ -24,7 +24,7 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 	
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
@@ -120,7 +120,7 @@
 			</div>
 		</div>
 
-		<%@ include file="/Views/footer.jsp"%>
+		<%@ include file="/footer.jsp"%>
 		<script src="../Javascript/home.js"></script>
 </body>
 </html>

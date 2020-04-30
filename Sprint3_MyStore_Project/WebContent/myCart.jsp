@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<link href="../Style/home.css" rel="stylesheet" type="text/css" />
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -17,7 +17,7 @@
 </head>
 <body>
 	
-	<%@ include file="/Views/header.jsp"%>
+	<%@ include file="/header.jsp"%>
 
 
 	<div class="container bootstrap snippet" style="padding-bottom: 40px">
@@ -42,7 +42,7 @@
 		</div>
 	</div>
 
-	<%@ include file="/Views/footer.jsp"%>
+	<%@ include file="/footer.jsp"%>
 	
 	<script src="../Javascript/home.js"></script>
 </body>
