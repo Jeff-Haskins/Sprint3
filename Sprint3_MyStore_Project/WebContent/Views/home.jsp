@@ -25,6 +25,7 @@
 
 </head>
 <body>
+
 	<%@ include file="/Views/header.jsp"%>
 
 	<div id="carouselExampleCaptions" class="carousel slide"
@@ -76,6 +77,7 @@
 	</div>
 
 	<%@ include file="/Views/footer.jsp"%>
+
 	<script src="../Javascript/home.js"></script>
 </body>
 </html>

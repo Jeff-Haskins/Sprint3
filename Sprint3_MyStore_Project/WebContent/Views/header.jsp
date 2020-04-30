@@ -10,7 +10,7 @@
         <form class=" form-inline my-2 my-lg-0" action="${pageContext.request.contextPath}/Views/products.jsp">
             <input class="form-control mr-sm-2" type="search"
                 placeholder="Search" aria-label="Search" id="searchProductInput">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit"
+            <button class="btn btn-danger" type="submit"
                 id="searchButton">Search</button>
         </form>
         <!--        MyAccount button that will redirect to the My Account page -->
@@ -50,7 +50,24 @@
                         style="width: 80px; height: 40px; margin: 5px; padding: 0px 1px">
                         <a class="nav-link" href="${pageContext.request.contextPath}/Views/products.jsp">Products</a>
                     </li>
+                    
                 </ul>
             </div>
         </nav>
+        
+        <!--        MyAccount button that will redirect to the My Account page -->
+        <div class="btn-group">
+            <button type="button"
+                class="MyAccountBtn btn btn-danger dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
+                Account</button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../Views/myAccount.html">Profile</a>
+                <a class="dropdown-item" href="#">Orders</a> <a
+                    class="dropdown-item" href="#">Wishlist</a> <a
+                    class="dropdown-item" href="#">Logout</a>
+            </div>
+            <!-- MyCart button to see what is in your cart -->
+            <a id="cart" class="nav-link btn btn-danger" href="myCart.html">Cart</a>
+        </div>
     </nav>

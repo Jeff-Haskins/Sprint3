@@ -82,22 +82,22 @@
 					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 						style="width: 60px;">
 					<p>
-						<a class="dark-grey-text" href="Views/aboutus.jsp">About Us</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/aboutus.jsp">About Us</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/careers.jsp">Careers</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/careers.jsp">Careers</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/userstories.jsp">User Stories</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/userstories.jsp">User Stories</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/testimonials.jsp">Testimonials</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/testimonials.jsp">Testimonials</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/press.jsp">Press</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/press.jsp">Press</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/photos.jsp">Photos</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/photos.jsp">Photos</a>
 					</p>
 
 				</div>
@@ -111,16 +111,16 @@
 					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
 						style="width: 60px;">
 					<p>
-						<a class="dark-grey-text" href="Views/payments.jsp">Payments</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/payments.jsp">Payments</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/shipping.jsp">Shipping</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/shipping.jsp">Shipping</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/cancellation&return.jsp">Cancellation & Returns</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/cancellation&return.jsp">Cancellation & Returns</a>
 					</p>
 					<p>
-						<a class="dark-grey-text" href="Views/faq.jsp">FAQ</a>
+						<a class="dark-grey-text" href="${pageContext.request.contextPath}/Views/faq.jsp">FAQ</a>
 					</p>
 
 				</div>
