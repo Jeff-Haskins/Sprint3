@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="mma" uri="/WEB-INF/pawsco.tld" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<%@ include file="/header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 	<div style="text-align: center">
 		<br><h3>User Registration</h3><br>
