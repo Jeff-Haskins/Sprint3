@@ -50,12 +50,14 @@ public class LoadProductsFilter implements Filter {
 	            List<Product> products = new ArrayList<>();
 	            
 	            while (results.next()) {
+	            	int id = results.getInt("ProductID");
 	            	String name = results.getString("Name");
+	            	String category = results.getString("Category");
 	            	String description = results.getString("Description");
 	            	Double price = results.getDouble("Price");
 	            	String imgFile = results.getString("ImageFilename");
 	            	
-	            	Product p = new Product(name, description, price, imgFile);
+	            	Product p = new Product(id, name, category, description, price, imgFile);
 	            	products.add(p);
 	            	
 	            	request.getServletContext().setAttribute("products", products.toArray());
