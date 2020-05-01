@@ -83,6 +83,6 @@
 
 	<%@ include file="/footer.jsp"%>
 
-	<script src="../Javascript/home.js"></script>
+	<script src="${pageContext.request.contextPath}/Javascript/home.js"></script>
 </body>
 </html>

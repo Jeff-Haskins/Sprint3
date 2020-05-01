@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
+
     
 <!-- Nav bar for search bar, my account button, and shopping cart button -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3071A9;"id="navcolor">
