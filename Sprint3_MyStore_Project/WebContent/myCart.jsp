@@ -30,7 +30,7 @@
 							<div class="table-responsive" id="cartDiv"></div>
 						</div>
 					</div>
-					<a href="${pageContext.request.contextPath}/Views/products.jsp" class="btn btn-success"
+					<a href="products.jsp" class="btn btn-success"
 						style="background-color: #3071A9; border-color: #3071A9"><i
 						class="fas fa-angle-left"></i> Continue Shopping</a> <a href="#"
 						class="btn btn-primary float-right" id="btnNext"

@@ -17,6 +17,15 @@
 	</filter-mapping>
 
 	<servlet>
+		<servlet-name>CartServlet</servlet-name>
+		<servlet-class>com.pawsco.servlets.CartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartServlet</servlet-name>
+		<url-pattern>/cartAdd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>RegistrationServlet</servlet-name>
 		<servlet-class>com.pawsco.servlets.RegistrationServlet</servlet-class>
 	</servlet>
