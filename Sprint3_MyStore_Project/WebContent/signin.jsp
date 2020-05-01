@@ -23,7 +23,7 @@
         <mma:ifEmptyMark field="${user.lastName}"/><br>        
 
         <label>&nbsp;</label>
-        <input type="submit" value="Join Now" class="margin_left">
+        <input type="submit" value="Sign In" class="margin_left">
     </form>
     
 </body>

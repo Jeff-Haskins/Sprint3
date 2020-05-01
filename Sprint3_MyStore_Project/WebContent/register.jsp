@@ -34,7 +34,9 @@
 					</tr>
 					<tr>
 						<td colspan="2" style="text-align: center">
-							<input type="submit" value="Register">
+							<a href="home.jsp" >
+								<input type="submit" value="Register">
+							</a>
 						</td>
 					</tr>
 				</table>
