@@ -1,5 +1,15 @@
 @charset "ISO-8859-1";
 
+#signin-reg{
+	position: left;
+	right: 10%;
+	color: white;
+	padding: 10px;
+	width: 300%;
+	height: 20%;
+	
+}
+
 #myaccount {
 	float: right
 	text-align: right;
@@ -98,4 +108,7 @@ p#profile {
     margin-top: -4px;
     margin-right: 8px;
     font-size: 1.1em;
+}
+.page-footer{
+	padding: 500px;
 }
