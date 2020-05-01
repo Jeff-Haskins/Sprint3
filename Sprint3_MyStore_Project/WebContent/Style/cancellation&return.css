@@ -4,6 +4,17 @@
 span{
 	color:blue;
 }
+
+#signin-reg{
+	position: left;
+	right: 10%;
+	color: white;
+	padding: 10px;
+	width: 300%;
+	height: 20%;
+	
+}
+
 #myaccount {
 	float: right
 	text-align: right;

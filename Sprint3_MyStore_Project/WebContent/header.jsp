@@ -43,6 +43,7 @@
         
         <!--        MyAccount button that will redirect to the My Account page -->
         <div class="btn-group">
+        	<a id="signin-reg" class="signin-RegisterBtn btn btn-danger">Sign in/Register</a>
             <button type="button"
                 class="MyAccountBtn btn btn-danger dropdown-toggle"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My
