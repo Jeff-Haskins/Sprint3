@@ -11,6 +11,11 @@ $(document).ready(function(){
 		})
 	});
 	
+	$("#resetPage").click(function(){
+		//clears out the search
+		localStorage.setItem("searchInput", "");
+		location.reload();		
+	})
 	$("#lessThanFive").on("click", function(){
 		resetPage()
 		var cardPrice = $(".price")
@@ -87,9 +92,10 @@ $(document).ready(function(){
 	searchProduct();
 	//checks to see if user input in search matches anything in local storage
 	function searchProduct(e){
+		resetPage();
 		var getInput = localStorage.getItem("searchInput");
 		//if user input isnt null or empty it will iterate through the cards div array
-		if(getInput != null || getInput != ""){
+		if(getInput != null || getInput != "" || getInput != undefined){
 			var cardDivs = $(".card-title");
 			for(var i=0; i<cardDivs.length; i++){
 				//if the innertext doesnt have same input of user input it will hide all cards that doesn't contain the user input
