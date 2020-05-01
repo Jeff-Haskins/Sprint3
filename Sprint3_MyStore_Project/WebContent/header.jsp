@@ -10,8 +10,8 @@
         
         <!-- Search Bar Form -->
         <form id="searchBar"class=" form-inline my-2 my-lg-0" action="${pageContext.request.contextPath}/products.jsp">
-            <input id="searchBar" class="form-control mr-sm-2" type="search"
-                placeholder="Search" aria-label="Search" id="searchProductInput">
+            <input id="searchProductInput" class="form-control mr-sm-2" type="search"
+                placeholder="Search" aria-label="Search" >
             <button id="searchButton" class="btn btn-danger" type="submit"
                 id="searchButton">Search</button>
         </form>

@@ -38,7 +38,7 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<a href="${pageContext.request.contextPath}/Views/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogfood.jpg"
+				<a href="${pageContext.request.contextPath}/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogfood.jpg"
 					class="d-block w-100" style alt="..." style="width:auto;">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="${pageContext.request.contextPath}/Views/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogtoy.jpg"
+				<a href="${pageContext.request.contextPath}/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogtoy.jpg"
 					class="d-block w-100" alt="..." style="width:auto; height:570px">
 				</a>
 				<div class="carousel-caption d-none d-md-block">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<a href="${pageContext.request.contextPath}/Views/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogshampoo.jpg"
+				<a href="${pageContext.request.contextPath}/products.jsp"> <img src="${pageContext.request.contextPath}/Image/dogshampoo.jpg"
 					class="d-block w-100" alt="..." style="width:auto; height:570px">
 				</a>
 				<div class="carousel-caption d-none d-md-block">

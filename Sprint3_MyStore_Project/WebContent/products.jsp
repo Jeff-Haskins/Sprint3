@@ -7,8 +7,10 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-<link href="${pageContext.request.contextPath}/Style/product.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/filter.js"></script>
+<link href="${pageContext.request.contextPath}/Style/product.css"
+	rel="stylesheet" type="text/css" />
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/scripts/filter.js"></script>
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
@@ -23,7 +25,7 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
-<script src="../Javascript/temp.js"></script>
+<script src="${pageContext.request.contextPath}/Javascript/temp.js"></script>
 
 
 </head>
@@ -31,6 +33,9 @@
 
 	<%@ include file="/header.jsp"%>
 	<div>
+		<div id="resetPage">
+			<button type="button" class="btn btn-primary">Show All</button>
+		</div>
 		<div id="price" class=".nav-item dropdown" style="width: 5%">
 			<a class="nav-link dropdown-toggle btn btn-success" href="#"
 				id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -65,7 +70,8 @@
 					<div class="card h-100 item-card" id="product1">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/nulo.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/nulo.jpg"
 								alt="Card image cap"
 								style="width: 250px; height: 400px; display: block; margin-left: auto; margin-right: auto;">
 							<a href="#!">
@@ -113,7 +119,8 @@
 					<div class="card h-100 item-card" id="product2">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/blue.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/blue.jpg"
 								alt="Card image cap" style="margin-top: 50px;"> <a
 								href="#!">
 								<div class="mask rgba-white-slight"></div>
@@ -155,7 +162,8 @@
 					<div class="card h-100 item-card" id="product3">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/dental.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/dental.jpg"
 								alt="Card image cap" style="margin-top: 20px;"> <a
 								href="#!">
 								<div class="mask rgba-white-slight"></div>
@@ -203,7 +211,8 @@
 					<div class="card h-100 item-card" id="product4">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/kong.png"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/kong.png"
 								alt="Card image cap" style="margin-top: 70px;"> <a
 								href="#!">
 								<div class="mask rgba-white-slight"></div>
@@ -253,7 +262,8 @@
 					<div class="card h-100 item-card" id="product5">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/starwars.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/starwars.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -297,7 +307,8 @@
 					<div class="card h-100 item-card" id="product6">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/deadpool.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/deadpool.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -344,7 +355,8 @@
 					<div class="card h-100 item-card" id="product7">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/petfurniture.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/petfurniture.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -388,7 +400,8 @@
 					<div class="card h-100 item-card" id="product8">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/dogbed.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/dogbed.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -431,7 +444,8 @@
 					<div class="card h-100 item-card" id="product9">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/dogcrate.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/dogcrate.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -480,7 +494,8 @@
 					<div class="card h-100 item-card" id="product10">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/nailclipper.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/nailclipper.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -527,7 +542,8 @@
 					<div class="card h-100 item-card" id="product11">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/brush.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/brush.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -575,7 +591,8 @@
 					<div class="card h-100 item-card" id="product12">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/burtsbee.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/burtsbee.jpg"
 								alt="Card image cap" style="margin-top: 150px;"> <a
 								href="#!">
 								<div class="mask rgba-white-slight"></div>
@@ -599,8 +616,8 @@
 								</form>
 								<!--Text-->
 								<p class="card-text collapse" id="collapseContent12">Bring
-									natureâs best to your pets with Burtâs Bees Natural Pet Care.
-									Experience the full line of gentle pet grooming products
+									natureâs best to your pets with Burtâs Bees Natural Pet
+									Care. Experience the full line of gentle pet grooming products
 									featuring natural ingredients including honey, chamomile, and
 									lavender. All products are specially formulated for pets,
 									keeping you, your pet and the environment happy.</p>
@@ -622,7 +639,8 @@
 					<div class="card h-100 item-card">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/raincoat.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/raincoat.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -671,7 +689,8 @@
 					<div class="card h-100 item-card" id="product14">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/sweater.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/sweater.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -714,7 +733,8 @@
 					<div class="card h-100 item-card" id="product15">
 						<!--Card image-->
 						<div class="view overlay">
-							<img class="card-img-top" src="${pageContext.request.contextPath}/Image/winterjacket.jpg"
+							<img class="card-img-top"
+								src="${pageContext.request.contextPath}/Image/winterjacket.jpg"
 								alt="Card image cap"> <a href="#!">
 								<div class="mask rgba-white-slight"></div>
 							</a>
@@ -757,10 +777,12 @@
 				</div>
 			</div>
 		</div>
-</div>
-		<%@ include file="/footer.jsp"%>
+	</div>
+	<script src="${pageContext.request.contextPath}/Javascript/home.js"></script>
+	<script src="${pageContext.request.contextPath}/Javascript/product.js"></script>
 
-		<script src="../Javascript/product.js"></script>
-		<script src="../Javascript/home.js"></script>
+
+	<%@ include file="/footer.jsp"%>
+
 </body>
 </html>
