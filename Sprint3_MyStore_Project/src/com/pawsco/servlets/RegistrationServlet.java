@@ -26,7 +26,8 @@ public class RegistrationServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		this.doPost(request, response);
 	}
 
 	/**
@@ -34,15 +35,63 @@ public class RegistrationServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String email = request.getParameter("email");
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		User user = new User(email, firstName, lastName);
+		/*
+		 * String email = request.getParameter("email"); String firstName =
+		 * request.getParameter("firstName"); String lastName =
+		 * request.getParameter("lastName"); User user = new User(email, firstName,
+		 * lastName);
+		 * 
+		 * HttpSession session = request.getSession(); session.setAttribute("user",
+		 * user);
+		 * 
+		 * request.getRequestDispatcher("signin.html").forward(request, response);
+		 */
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("user", user);
-		
-		response.getWriter().append(String.format("Email: %s\nFirst Name: %s\nLast Name: %s", user.getEmail(), user.getFirstName(), user.getLastName()));
+		String url = "/register.jsp";
+        
+        // get current action
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "Register";  // default action
+        }
+
+        // perform action and set URL to appropriate page
+        if (action.equals("Register")) {
+            url = "/signin.jsp";    // the "join" page
+        } 
+        else if (action.equals("add")) {
+            // get parameters from the request
+            String firstName = request.getParameter("firstName");
+            String lastName = request.getParameter("lastName");
+            String email = request.getParameter("email");
+
+            // create the User object
+            User user = new User();
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setEmail(email);
+
+            // store the User object in the session
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+
+            if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty())
+            {
+                // forward to the view to get missing parameters
+                url = "/home.jsp";
+            }
+            else
+            {
+                // write the User object to a file
+                UserDB.insert(user);
+
+                // forward to the view
+                url = "/signin.jsp";
+            }        
+        }
+
+        getServletContext().getRequestDispatcher(url)
+                .forward(request, response);
 	}
 
 }

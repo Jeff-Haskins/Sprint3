@@ -28,13 +28,13 @@
                 <ul class="navbar-nav mr-auto">
               
                     <li id="home" class="btn btn-danger"
-                        ><a
+                        ><a id="home"
                         class="nav-link" href="${pageContext.request.contextPath}/home.jsp">Home <span class="sr-only">(current)</span>
                     </a></li>
                     <!-- Products button that will redirect to the products page -->
                     <li id="product" class="btn btn-danger"
                         >
-                        <a class="nav-link" href="${pageContext.request.contextPath}/products.jsp">Products</a>
+                        <a id="product" class="nav-link" href="${pageContext.request.contextPath}/products.jsp">Products</a>
                     </li>
                     
                 </ul>

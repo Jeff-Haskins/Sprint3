@@ -1,5 +1,7 @@
 package com.pawsco.servlets;
 
+import com.pawsco.business.User;
+
 public class UserDB {
 
 	 public static long insert(User user) {
