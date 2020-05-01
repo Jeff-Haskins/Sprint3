@@ -9,6 +9,9 @@
 	crossorigin="anonymous">
 <link href="${pageContext.request.contextPath}/Style/myAccount.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/myAccount.js"></script>
+<script src="${pageContext.request.contextPath}/scripts/wListToCart.js"></script>
+<script src="${pageContext.request.contextPath}/Javascript/temp.js"></script>
+<script src="${pageContext.request.contextPath}/Javascript/wishlist.js"></script>
 
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -26,9 +29,6 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
-<script src="${pageContext.request.contextPath}/scripts/wListToCart.js"></script>
-<script src="${pageContext.request.contextPath}/Javascript/temp.js"></script>
-<script src="${pageContext.request.contextPath}/Javascript/wishlist.js"></script>
 
 </head>
 <body>
@@ -37,7 +37,7 @@
 	<div class="container padding-bottom-3x mb-2">
 		<div class="row">
 			<div class="col-lg-4">
-				<p id="profilehead">Profile Info</p>
+				<p id="profilehead">Profile Info</p><br>
 				<p id="profile">
 					<script>
 						getFormData();

@@ -1,3 +1,5 @@
+@charset "ISO-8859-1";
+
 #myaccount {
 	float: right
 	text-align: right;
@@ -76,8 +78,6 @@ p#profile {
 	outline-color: #2D7CEA;
 	font-family: "Lucida Console", Courier, monospace;
 }
-
-body{margin-top:20px;}
 
 .container{
 	position: absolute;
