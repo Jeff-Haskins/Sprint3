@@ -17,8 +17,8 @@
                 id="searchButton">Search</button>
         </form>
         
-        <c:if test="${sessionScope.user != null}">
-        	<c:out value="Welcome back, ${sessionScope.user.firstName}!"/>
+        <c:if test="${not empty cookie.userEmail}">
+        	<c:out value="Welcome back, ${user.firstName}!"/>
         </c:if>
 
  <!-- Nav tag for second level selections for categories and home button -->
@@ -43,7 +43,8 @@
         
         <!--        MyAccount button that will redirect to the My Account page -->
         <div class="btn-group">
-        	<a id="signin-reg" class="signin-RegisterBtn btn btn-danger">Sign in/Register</a>
+        	<a id="signin-reg" class="signin-RegisterBtn btn btn-danger" 
+        	href="${pageContext.request.contextPath}/register.jsp">Sign in/Register</a>
             <button type="button"
                 class="MyAccountBtn btn btn-danger dropdown-toggle"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My

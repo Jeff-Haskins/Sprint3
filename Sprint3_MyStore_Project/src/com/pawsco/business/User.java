@@ -44,4 +44,16 @@ public class User implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public void removeLastName() {
+		this.lastName = "";
+	}
+	
+	public void removeFirstName() {
+		this.firstName = "";
+	}
+	
+	public void removeEmail() {
+		this.email = "";
+	}
 }
