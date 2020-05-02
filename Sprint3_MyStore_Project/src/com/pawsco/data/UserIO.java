@@ -2,13 +2,10 @@ package com.pawsco.data;
 
 import java.io.BufferedReader;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+
+import java.io.*;
+
+import java.util.*;
 
 import com.pawsco.business.User;
 
