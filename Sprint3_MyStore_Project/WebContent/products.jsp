@@ -4,29 +4,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Products</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
-<link href="${pageContext.request.contextPath}/Style/product.css"
-	rel="stylesheet" type="text/css" />
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/scripts/filter.js"></script>
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
-<script src="${pageContext.request.contextPath}/Javascript/temp.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="${pageContext.request.contextPath}/Style/product.css" rel="stylesheet" type="text/css" />
+<link href="Style/header.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/filter.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/Javascript/temp.js"></script> --%>
 
 
 </head>
@@ -65,53 +51,55 @@
 		</div>
 
 		<div style="text-align: center; margin-left: 10%">
-		<div class="row row-cols-1 row-cols-md-3" style="width: 80%; text-align: left">
-			<c:forEach var="product" items="${applicationScope.products}">
-				<div class="col mb-4 ${product.category}">
-					<div class="card h-100 item-card">
-						<!--Card image-->
-						<div class="view overlay">
-							<img class="card-img-top" src="Image/${product.imgFile}"
-								alt="Card image cap"
-								style="max-width: 300px; max-height: 250px; width: auto; height: auto; display: block; margin-left: auto; margin-right: auto;">
-							<a href="#!">
-								<div class="mask rgba-white-slight"></div>
-							</a>
-						</div>
-						<!--Card content-->
-						<div class="card-body">
-							<div class="collapse-content">
-								<!--Title-->
-								<h4 class="card-title">
-									<c:out value="${product.name}" />
-								</h4>
-								<h4 class="price">
-									<c:out value="$${product.price}" />
-								</h4>
-								<form>
-									<label for="qty">Qty</label> <input type="number" id="quantity"
-										name="quantity" min="1" max="10" value="1"> <input
-										type="submit"
-										class="cartBtn btn btn-outline-primary waves-effect"
-										value="Add To Cart"><input type="submit" id="wishlist"
-										class="wishlistBtn btn btn-outline-primary waves-effect"
-										value="+Wish List">
-								</form>
-								<!--Text-->
-								<p class="card-text collapse" id="collapseContent${product.id}">
-									<c:out value="${product.description}" />
-								</p>
-								<a
-									class="btn btn-primary red-text p-1 my-1 mr-0 mml-1 collapsed"
-									data-toggle="collapse" href="#collapseContent${product.id}"
-									aria-expanded="false" aria-controls="collapseContent${product.id}">Read
-									More</a>
+			<div class="row row-cols-1 row-cols-md-3"
+				style="width: 80%; text-align: left">
+				<c:forEach var="product" items="${applicationScope.products}">
+					<c:if test="${param.filter == null || product.value.category == param.filter}">
+					<div class="col mb-4 ${product.value.category}">
+						<div class="card h-100 item-card">
+							<!--Card image-->
+							<div class="view overlay">
+								<img class="card-img" src="Image/${product.value.imgFile}"
+									alt="Card image cap"
+									style="max-width: 300px; max-height: 250px; width: auto; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 10px">
+							</div>
+							<!--Card content-->
+							<div class="card-body">
+								<div class="collapse-content">
+									<!--Title-->
+									<h4 class="card-title">
+										<c:out value="${product.value.name}" />
+									</h4>
+									<h4 class="price">
+										<c:out value="$${product.value.price}" />
+									</h4>
+									<form action="cartAdd" method="post">
+										<input type="hidden" name="productid" value="${product.key}">
+										<label for="qty">Qty</label> <input type="number"
+											id="quantity" name="quantity" min="1" max="10" value="1">
+										<input type="submit"
+											class="cartBtn btn btn-outline-primary waves-effect"
+											value="Add To Cart"><input type="submit"
+											id="wishlist"
+											class="wishlistBtn btn btn-outline-primary waves-effect"
+											value="+Wish List">
+									</form>
+									<!--Text-->
+									<p class="card-text collapse" id="collapseContent${product.key}">
+										<c:out value="${product.value.description}" />
+									</p>
+									<a
+										class="btn btn-primary red-text p-1 my-1 mr-0 mml-1 collapsed"
+										data-toggle="collapse" href="#collapseContent${product.key}"
+										aria-expanded="false"
+										aria-controls="collapseContent${product.key}">Read More</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</c:forEach>
-		</div>
+					</c:if>
+				</c:forEach>
+			</div>
 		</div>
 	</div>
 	<script src="${pageContext.request.contextPath}/Javascript/home.js"></script>

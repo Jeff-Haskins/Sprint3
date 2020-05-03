@@ -5,8 +5,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -47,7 +47,7 @@ public class LoadProductsFilter implements Filter {
 	            String query = "SELECT * FROM AllProducts";    
 	            ResultSet results = statement.executeQuery(query);
 	            
-	            List<Product> products = new ArrayList<>();
+	            Map<Integer, Product> products = new HashMap<>();
 	            
 	            while (results.next()) {
 	            	int id = results.getInt("ProductID");
@@ -58,9 +58,9 @@ public class LoadProductsFilter implements Filter {
 	            	String imgFile = results.getString("ImageFilename");
 	            	
 	            	Product p = new Product(id, name, category, description, price, imgFile);
-	            	products.add(p);
+	            	products.put(id, p);
 	            	
-	            	request.getServletContext().setAttribute("products", products.toArray());
+	            	request.getServletContext().setAttribute("products", products);
 	            }
 	            
 	            results.close();

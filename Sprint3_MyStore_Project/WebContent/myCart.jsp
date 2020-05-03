@@ -7,7 +7,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
 	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<link href="${pageContext.request.contextPath}/Style/home.css" rel="stylesheet" type="text/css" />
+<link href="Style/header.css" rel="stylesheet" type="text/css">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -30,7 +30,7 @@
 							<div class="table-responsive" id="cartDiv"></div>
 						</div>
 					</div>
-					<a href="${pageContext.request.contextPath}/Views/products.jsp" class="btn btn-success"
+					<a href="products.jsp" class="btn btn-success"
 						style="background-color: #3071A9; border-color: #3071A9"><i
 						class="fas fa-angle-left"></i> Continue Shopping</a> <a href="#"
 						class="btn btn-primary float-right" id="btnNext"
