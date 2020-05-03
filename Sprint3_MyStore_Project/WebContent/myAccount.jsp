@@ -3,10 +3,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Welcome to Pawsco Wholesale</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
+<link href="Style/header.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link href="${pageContext.request.contextPath}/Style/myAccount.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/myAccount.js"></script>
 <script src="${pageContext.request.contextPath}/scripts/wListToCart.js"></script>

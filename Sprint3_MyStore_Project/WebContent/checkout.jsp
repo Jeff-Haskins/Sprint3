@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <!-- Custom styles for this template -->
 <!-- <link href="./css/form-validation.css" rel="stylesheet"> -->
-<link href="Style/home.css" rel="stylesheet" type="text/css" />
+<link href="Style/header.css" rel="stylesheet" type="text/css">
 <title>Checkout</title>
 </head>
 <body class="bg-light">
