@@ -41,7 +41,6 @@
 		</div>
 	</div>
 	
-
 	<%@ include file="/footer.jsp"%>
 	
 	<script src="../Javascript/home.js"></script>

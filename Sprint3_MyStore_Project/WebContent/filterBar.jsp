@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<div style="text-align: center; background-color: #DDDDDD; border-bottom: 5px solid #3071A9; padding: 5px;">
+<div style="text-align: center; background-color: #DDDDDD; padding: 5px;">
 	<div style="display: inline">
 		<form action="products.jsp" style="display: inline">
 		<button type="submit" class="btn btn-primary" id="resetPage"
@@ -32,3 +32,4 @@
 		</div>
 	</div>
 </div>
+<div style="width: 100%; height: 10px; background-color: #3071A9; border-top: 1px solid black; border-bottom: 1px solid black"></div>
