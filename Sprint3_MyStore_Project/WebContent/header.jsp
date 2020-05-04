@@ -21,9 +21,14 @@
 						</div>
 					</div>
 				</div>
-				<div style="display: table-cell; text-align: center; width: 40%">
-					<input class="search-box" type="text" placeholder="Search">
-					<a class="navbtn" href=""><i class="fas fa-search"></i> Search</a>
+				<div id="searchBar" style="display: table-cell; text-align: center; width: 40%">
+					<input id="searchProductInput" type="text" style="
+						padding: 7px;
+						margin-bottom: 7px; 
+						border-radius: 5px;
+						width: 70%;
+						min-width: 200px">
+					<a class="navbtn" href="products.jsp" id="searchButton"><i class="fas fa-search" ></i> Search</a>
 				</div>
 				<div style="display: table-cell">
 					<c:choose>

@@ -75,12 +75,12 @@
 	
 }
 
-#filter {
+/* #filter {
 	position: absolute;
 	right: 0px;
 	width: 150px;
 	padding: 10px;
-}
+} */
 
 .item-card:hover {
 	transform: scale(1.05);
