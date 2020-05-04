@@ -39,7 +39,15 @@
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>com.pawsco.servlets.LoginServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.pawsco.servlets.LogoutServlet</servlet-class>
+	</servlet>
 	
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>CartServlet</servlet-name>
 		<url-pattern>/cartAdd</url-pattern>
