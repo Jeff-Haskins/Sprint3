@@ -96,7 +96,7 @@
 											<c:out value="${product.value.description}" />
 										</p>
 										<a
-											class="btn btn-primary red-text p-1 my-1 mr-0 mml-1 collapsed"
+											class="btn btn-primary red-text p-1 my-1 mr-0 mml-1 collapsed read-more"
 											data-toggle="collapse" href="#collapseContent${product.key}"
 											aria-expanded="false"
 											aria-controls="collapseContent${product.key}">Read More</a>
