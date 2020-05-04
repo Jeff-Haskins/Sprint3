@@ -1,6 +1,7 @@
 package com.pawsco.filters;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -8,16 +9,19 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LoginFilter implements Filter {
+import com.pawsco.business.User;
+import com.pawsco.data.UserDB;
+
+public class CookieFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public LoginFilter() {
+    public CookieFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -33,14 +37,21 @@ public class LoginFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
-		HttpServletRequest httpRequest = (HttpServletRequest)request;
-		HttpServletResponse httpResponse = (HttpServletResponse)response;
-		HttpSession session = httpRequest.getSession();
-		
-		
-		if (session.getAttribute("user") == null) {
-			httpResponse.sendRedirect("signin.jsp");
-			return;
+		if (request.getAttribute("user") == null ) {
+			HttpServletRequest httpRequest = (HttpServletRequest)request;
+			HttpSession session = httpRequest.getSession();
+			
+			Cookie[] cookies = httpRequest.getCookies();
+			for (Cookie c : cookies) {
+				if (c.getName().equals("userEmail")) {
+					try {
+						User user = UserDB.selectUser(c.getValue());
+						session.setAttribute("user", user);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+			}
 		}
 		
 		chain.doFilter(request, response);

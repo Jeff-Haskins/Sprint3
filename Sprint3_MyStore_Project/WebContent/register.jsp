@@ -38,6 +38,7 @@
 				<hr>
 				<p><a href="view_cookies.jsp?action=viewCookies">View all cookies</a></p>
 			</div>
+
 		</div>
 	</div>
 	

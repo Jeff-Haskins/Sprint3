@@ -143,12 +143,15 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
 
-            // add a cookie that stores the user's email to browser
-            Cookie c = new Cookie("userEmail", email);
-            c.setMaxAge(60 * 60 * 24 * 365 * 3); // set age to 3 years
-            c.setPath("/");    
-            // allow entire app to access it
-            response.addCookie(c);
+            String remember = request.getParameter("remember");
+            if (remember != null && remember.equals("yes")) {
+            	// add a cookie that stores the user's email to browser
+                Cookie c = new Cookie("userEmail", email);
+                c.setMaxAge(60 * 60 * 24 * 365 * 3); // set age to 3 years
+                c.setPath("/");    
+                // allow entire app to access it
+                response.addCookie(c);
+            }
             
             message = "logging in...";
             request.setAttribute("message", message);

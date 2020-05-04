@@ -1,8 +1,10 @@
 package com.pawsco.servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,6 +32,16 @@ public class LogoutServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		session.removeAttribute("user");
+		
+		Cookie[] cookies = request.getCookies();
+		for (Cookie c : cookies) {
+			if (c.getName().equals("userEmail")) {
+				System.out.println(c.getValue());
+				c.setMaxAge(0);
+				response.addCookie(c);
+			}
+		}
+		
 		request.getRequestDispatcher("loggedOut.jsp").forward(request, response);
 	}
 

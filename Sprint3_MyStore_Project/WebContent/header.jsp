@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<div style="background-color: #3071A9; text-align: center; padding: 10px;">
+<div class="main-header-div">
 		<div style="width: 80%; display: inline-table">
 			<div style="display: table-row">
 				<div style="display: table-cell">
@@ -44,7 +44,7 @@
 					<a class="navbtn" href="myCart.jsp">
 						<i class="fas fa-shopping-cart"></i> Cart
 						<c:if test="${sessionScope.cart != null}">
-							<c:out value=" (${sessionScope.cart.size()})"/>
+							<c:out value=" (${sessionScope.cart.length()})"/>
 						</c:if>
 					</a>
 					<br>

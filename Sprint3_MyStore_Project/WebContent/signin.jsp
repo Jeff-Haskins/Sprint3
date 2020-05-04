@@ -29,7 +29,7 @@
 					<input type="password" name="password" id="password" required>
 					<input type="submit" value="Sign In">
 					<div style="display: inline">
-						<input type="checkbox" value="remember" id="remember">
+						<input type="checkbox" value="yes" name="remember" id="remember">
 						<label for="remember">Remember Me</label>
 					</div>
 				</form>
