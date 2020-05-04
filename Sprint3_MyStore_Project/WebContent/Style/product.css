@@ -102,3 +102,33 @@
 .card-img-top{
 	border-radius: 15px 15px 0px 0px; 
 }
+
+.read-more {
+	background-color: #3071A9;
+	outline-color: #3071A9;
+}
+
+.read-more:hover {
+	background-color: #245580;
+}
+
+.cartBtn {
+	border-color: #3071A9;
+	color: #3071A9;
+	background-color: white;
+}
+
+.cartBtn:hover {
+	background-color: #3071A9;
+	color: white;
+}
+
+.wishlistBtn {
+	border-color: #3071A9;
+	color: #3071A9;
+}
+
+.wishlistBtn:hover {
+	background-color: #3071A9;
+	color: white;
+}

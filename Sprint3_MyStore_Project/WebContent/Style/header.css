@@ -32,6 +32,24 @@
 	outline: none;
 }
 
+.search-btn {
+	color: white;
+	background-color: #e31936;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #555555;
+	text-shadow: 1px 1px 1px #555555;
+	transition: 0.2s;
+}
+
+.search-btn:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #b5142b;
+	transition: 0.2s;
+}
+
 .dropbtn {
   border: none;
   cursor: pointer;
