@@ -40,7 +40,7 @@ public class UserIO {
             while (line != null) {
                 StringTokenizer t = new StringTokenizer(line, "|");
                 if (t.countTokens() < 3) {
-                    return new User("", "", "");
+                    return new User("", "", "", "");
                 }
                 String token = t.nextToken();
                 if (token.equalsIgnoreCase(email)) {
@@ -71,7 +71,8 @@ public class UserIO {
                 String email = t.nextToken();
                 String firstName = t.nextToken();
                 String lastName = t.nextToken();
-                User user = new User(firstName, lastName, email);
+                String password = t.nextToken();
+                User user = new User(firstName, lastName, email, password);
                 users.add(user);
                 line = in.readLine();
             }

@@ -74,7 +74,14 @@
 	width: 60%; 
 	
 }
-p#profile {
+p#profile{
+	padding: 10px;
+	outline-style: solid;
+	outline-color: #2D7CEA;
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+#profilehead{
 	padding: 10px;
 	outline-style: solid;
 	outline-color: #2D7CEA;

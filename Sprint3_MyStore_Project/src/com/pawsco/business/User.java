@@ -5,22 +5,35 @@ import java.io.Serializable;
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	private Long userId;
 	private String email;
+	private String password;
 	private String firstName;
 	private String lastName;
 	
 	public User() {
 		this.email = "";
+		this.password = "";
 		this.firstName = "";
 		this.lastName = "";
 	}
 	
-	public User(String email, String firstName, String lastName) {
+	public User(String email, String password, String firstName, String lastName) {
 		this.email = email;
+		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 
+	
+	public Long getId() {
+        return userId;
+    }
+
+    public void setId(Long userId) {
+        this.userId = userId;
+    }
+    
 	public String getEmail() {
 		return email;
 	}
@@ -29,6 +42,14 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
