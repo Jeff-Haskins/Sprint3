@@ -69,7 +69,8 @@ public class LoadProductsFilter implements Filter {
 	            
 	            chain.doFilter(request, response);
 			} catch (SQLException e) {
-	            
+				System.out.println(e);
+				request.getRequestDispatcher("sqlException.jsp").forward(request, response);
 	        }
 		} else {
 			chain.doFilter(request, response);

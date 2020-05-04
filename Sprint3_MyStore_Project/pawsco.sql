@@ -2,10 +2,9 @@ DROP DATABASE IF EXISTS pawsco;
 CREATE DATABASE pawsco;
 USE pawsco;
 
-DROP TABLE IF EXISTS Categories;
 CREATE TABLE Categories (
 CategoryID INT PRIMARY KEY AUTO_INCREMENT,
-Name VARCHAR (50));
+Name NVARCHAR (50));
 
 INSERT INTO Categories
 (Name) VALUES
@@ -15,14 +14,13 @@ INSERT INTO Categories
 ('Grooming'),
 ('Apparel');
 
-DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
 ProductID INT PRIMARY KEY AUTO_INCREMENT,
 CategoryID INT,
-Name VARCHAR(50),
-Description VARCHAR(1000),
+Name NVARCHAR(50),
+Description NVARCHAR(1000),
 Price DOUBLE(10,2),
-ImageFilename VARCHAR(50),
+ImageFilename NVARCHAR(50),
 FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID));
 
 INSERT INTO Products
@@ -42,3 +40,19 @@ INSERT INTO Products
 (5, 'Rain Coat', 'Imagine how great your dog will feel wearing a waterproof rain jacket that really fits well. Voyagers K9 Apparel stitches quality and style together so your dog gets outdoors in a rain coat with long-lasting comfort. Easy to put on and keep on, our lightweight rain jacket blocks wind and rain so well that you and your dog will be a happier pair! For safety\'s sake, we\'ve added reflective piping along the raincoat\'s lower edge to draw attention to your dog in dark or dreary conditions. If your dog needs a comfortable rain jacket that fits, order today...your pup will thank you!', 19.99, 'raincoat.jpg'),
 (5, 'Sweater', 'Fall will be your pup\'s favorite season when they get to wear this comfortable Combed Cotton Cable Knit Dog Sweater by Doggie Design in Oatmeal!', 14.99, 'sweater.jpg'),
 (5, 'Winter Jacket', 'Easy to put on - very cozy and warm, full coverage, waterproof, attractive and appears well made. Adjustable, side snap closures that make it easy to tailor its fit. Warm and water resistant. The straps that attach to the back legs hold the coat in place during walks. Great fit, easy on and off as well as the fleece lining. Bring it for your pet in Winter! Let her/him feels warm and comfy.', 21.99, 'winterjacket.jpg');
+
+CREATE TABLE Users (
+Email NVARCHAR(40) PRIMARY KEY,
+FirstName NVARCHAR(40),
+LastName NVARCHAR(40));
+
+CREATE VIEW AllProducts AS
+SELECT 
+	p.ProductID, 
+	p.Name, 
+    c.Name AS 'Category', 
+    p.Description, 
+    p.Price, 
+    p.ImageFilename
+FROM Products p 
+JOIN Categories c ON p.CategoryID = c.CategoryID;
