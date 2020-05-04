@@ -30,7 +30,7 @@
 					<a class="navbtn" href=""><i class="fas fa-search"></i> Search</a>
 				</div>
 				<div style="display: table-cell">
-					<a class="navbtn" href=""><i class="fas fa-user"></i> Sign In/Register</a>
+					<a class="navbtn" href="register.jsp"><i class="fas fa-user"></i> Sign In/Register</a>
 					<a class="navbtn" href="myCart.jsp">
 						<i class="fas fa-shopping-cart"></i> Cart
 					</a>

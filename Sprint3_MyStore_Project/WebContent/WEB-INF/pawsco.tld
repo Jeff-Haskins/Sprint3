@@ -10,20 +10,20 @@
     <info>A custom tag library developed by 
          the Pawsco Team</info>
 
-   
-    <tag>
-        <name>ifEmptyMark</name>
-        <tagclass>com.pawsco.tags.IfEmptyMarkTag</tagclass>
-        <bodycontent>empty</bodycontent>
-        <attribute>
-            <name>color</name>
-            <required>false</required>
-        </attribute>
-        <attribute>
-            <name>field</name>
-            <required>true</required>
-            <rtexprvalue>true</rtexprvalue>
-        </attribute>
-    </tag>
+
+	<tag>
+		<name>ifEmptyMark</name>
+		<tagclass>com.pawsco.tags.IfEmptyMarkTag</tagclass>
+		<bodycontent>empty</bodycontent>
+		<attribute>
+			<name>color</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>field</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 
 </taglib>
