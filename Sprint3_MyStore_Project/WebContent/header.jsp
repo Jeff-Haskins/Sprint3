@@ -1,13 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<div style="background-color: #3071A9; text-align: center">
+<div style="background-color: #3071A9; text-align: center; padding: 10px;">
 		<div style="width: 80%; display: inline-table">
 			<div style="display: table-row">
 				<div style="display: table-cell">
 					<div style="display: inline">
 						<a href="home.jsp" style="display: inline-block">
-							<img src="images/logo3.png" style="padding: 10px">
+							<img src="images/logo3.png">
 						</a>
 						<div class="dropdown" style="display: inline-block">
 							<a class="navbtn dropbtn" href="products.jsp">Products</a>
@@ -22,13 +22,10 @@
 					</div>
 				</div>
 				<div id="searchBar" style="display: table-cell; text-align: center; width: 40%">
-					<input id="searchProductInput" type="text" style="
-						padding: 7px;
-						margin-bottom: 7px; 
-						border-radius: 5px;
-						width: 70%;
-						min-width: 200px">
-					<a class="navbtn" href="products.jsp" id="searchButton"><i class="fas fa-search" ></i> Search</a>
+					<form action="products.jsp" method="get">
+						<input class="search-box" type="text" name="search" placeholder="Search">
+						<button type="submit" class="search-btn"><i class="fas fa-search"></i> Search</button>
+					</form>
 				</div>
 				<div style="display: table-cell">
 					<c:choose>

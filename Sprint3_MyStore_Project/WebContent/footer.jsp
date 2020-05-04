@@ -157,7 +157,7 @@
 
 		<!-- Copyright -->
 		<div class="footer-copyright text-center text-black-50 py-3">
-			© 2020 Copyright: <a class="dark-grey-text" href="#!">Pawsco
+			© 2020 Copyright: <a class="dark-grey-text" href="home.jsp">Pawsco
 				Wholesale Corporation</a>. All rights reserved.
 		</div>
 		<!-- Copyright -->
