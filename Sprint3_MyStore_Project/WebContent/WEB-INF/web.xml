@@ -49,6 +49,10 @@
 		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>CartServlet</servlet-name>
 		<url-pattern>/cartAdd</url-pattern>
 	</servlet-mapping>

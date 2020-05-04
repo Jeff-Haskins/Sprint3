@@ -1,3 +1,4 @@
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +38,7 @@
 			<div class="col-lg-4">
 			<h4>Profile Info</h4>
 				<p id="profile">
+				
 					<label for="email">Email Address: ${user.email}</label><br>	
 					<label for="email">Name: ${user.firstName} ${user.lastName}</label>	
 				</p>

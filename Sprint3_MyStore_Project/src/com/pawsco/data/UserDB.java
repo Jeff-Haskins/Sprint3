@@ -82,6 +82,10 @@ public class UserDB {
 			}
 	}
 	
+	/*
+	 * selectUser will get the information stored with the user's profile in the database
+	 * and set it to the user object
+	 */
 	public static User selectUser(String email) throws SQLException {
 		ConnectionPool pool = ConnectionPool.getInstance();
 	 	Connection connection = pool.getConnection();
@@ -98,9 +102,7 @@ public class UserDB {
 			User user = null;
 			if(rs.next()) {
 				user = new User();
-				user.setId(rs.getLong("UserID"));
 				user.setEmail(rs.getString("email"));
-				user.setPassword(rs.getString("password"));
 				user.setFirstName(rs.getString("FirstName"));
 				user.setLastName(rs.getString("LastName"));
 			}
@@ -116,6 +118,9 @@ public class UserDB {
         }
 	}
 	
+	/*
+	 * emailExists checks the MySql database to see if the email exists
+	 */
 	public static boolean emailExists(String email) throws SQLException {
         ConnectionPool pool = ConnectionPool.getInstance();
         Connection connection = pool.getConnection();
@@ -138,5 +143,42 @@ public class UserDB {
             pool.freeConnection(connection);
         }
     }    
+	
+	/*
+	 * userExists checks to see if the email and password typed in matches an email and password in the MySql
+	 * database
+	 */
+	public static boolean userExists(String email, String password) throws SQLException {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection connection = pool.getConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        String query = "SELECT Email, Password FROM users "
+                + "WHERE Email = ? && Password = ?";
+        try {
+            ps = connection.prepareStatement(query);
+            ps.setString(1, email);
+            ps.setString(2, password);
+            rs = ps.executeQuery();
+            rs = ps.getResultSet();
+            if(rs.next()) {
+                // redirect or print but not both...
+                System.out.println("The user is valid");
+                return true;
+            } else {
+            	System.out.println("You are not valid");
+            	return false;
+            }
+        } catch (SQLException e) {
+            System.err.println(e);
+            return false;
+        } finally {
+            DBUtil.closeResultSet(rs);
+            DBUtil.closePreparedStatement(ps);
+            pool.freeConnection(connection);
+        }
+		
+    }
 
 }
