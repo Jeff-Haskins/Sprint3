@@ -47,7 +47,7 @@
 					<a class="navbtn" href="myCart.jsp">
 						<i class="fas fa-shopping-cart"></i> Cart
 						<c:if test="${sessionScope.cart != null}">
-							<c:out value=" (${sessionScope.cart.size()})"/>
+							
 						</c:if>
 					</a>
 					<br>
