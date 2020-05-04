@@ -53,7 +53,7 @@
 										<c:out value="${product.value.name}" />
 									</h4>
 									<h4 class="price">
-										<c:out value="${product.value.price}" />
+										<c:out value="$${product.value.price}" />
 									</h4>
 									<form action="cartAdd" method="post">
 										<input type="hidden" name="productid" value="${product.key}">
