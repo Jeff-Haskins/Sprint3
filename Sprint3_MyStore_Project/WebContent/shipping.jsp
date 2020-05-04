@@ -41,7 +41,7 @@
 
 				<!--Card image-->
 				<div class="view overlay">
-					<img class="card-img-top" src="../Image/sameday.jpg"
+					<img class="card-img-top" src="Image/sameday.jpg"
 						alt="Card image cap"> <a href="#!">
 						<div class="mask rgba-white-slight"></div>
 					</a>
@@ -68,7 +68,7 @@
 
 				<!--Card image-->
 				<div class="view overlay">
-					<img class="card-img-top" src="../Image/order-pickup.png"
+					<img class="card-img-top" src="Image/order-pickup.png"
 						alt="Card image cap" style="width: 70%; margin: 20px;"> <a
 						href="#!">
 						<div class="mask rgba-white-slight"></div>
@@ -95,7 +95,7 @@
 
 				<!--Card image-->
 				<div class="view overlay">
-					<img class="card-img-top" src="../Image/curbsidepickup.png"
+					<img class="card-img-top" src="Image/curbsidepickup.png"
 						alt="Card image cap" style="margin-top: 100px;"> <a
 						href="#!">
 						<div class="mask rgba-white-slight"></div>
