@@ -150,7 +150,7 @@ public class RegistrationServlet extends HttpServlet {
             url = "/register.jsp";
         } else {
             UserDB.insert(user);
-            message = "";
+            message = "user created";
             request.setAttribute("message", message);
             url = "/home.jsp";
         }

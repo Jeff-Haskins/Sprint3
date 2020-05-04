@@ -27,13 +27,13 @@
 				<form action="register" method="post">
 				<input type="hidden" name="action" value="registerUser">
 					<label for="email">Email Address</label>
-					<input type="email" name="email" value="${user.email }" required>
+					<input type="email" name="email"  required>
 					<label for="password">Password</label>
-					<input type="text" name="password" value="${user.password }" required>
+					<input type="text" name="password" " required>
 					<label for="firstName">First Name</label>
-					<input type="text" name="firstName" value="${user.firstName }" required>
+					<input type="text" name="firstName"" required>
 					<label for="lastName">Last Name</label>
-					<input type="text" name="lastName" value="${user.lastName }" required>
+					<input type="text" name="lastName"" required>
 					<input type="submit" value="Register">
 				</form>
 				<hr>
