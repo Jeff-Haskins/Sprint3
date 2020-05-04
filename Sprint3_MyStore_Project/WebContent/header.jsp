@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <div style="background-color: #3071A9; text-align: center">
@@ -30,10 +31,29 @@
 					<a class="navbtn" href="products.jsp" id="searchButton"><i class="fas fa-search" ></i> Search</a>
 				</div>
 				<div style="display: table-cell">
-					<a class="navbtn" href=""><i class="fas fa-user"></i> Sign In/Register</a>
+					<c:choose>
+						<c:when test="${sessionScope.user != null}">
+							<c:url var="btnURL" value="myAccount.jsp"/>
+							<c:set var="btnLabel" value="Hello, ${sessionScope.user.firstName}!"/>
+						</c:when>
+						<c:otherwise>
+							<c:url var="btnURL" value="signin.jsp"/>
+							<c:set var="btnLabel" value="Sign In/Register"/>
+						</c:otherwise>
+					</c:choose>
+					<a class="navbtn" href="${btnURL}">
+						<i class="fas fa-user"></i> ${btnLabel}
+					</a>
 					<a class="navbtn" href="myCart.jsp">
 						<i class="fas fa-shopping-cart"></i> Cart
+						<c:if test="${sessionScope.cart != null}">
+							<c:out value=" (${sessionScope.cart.size()})"/>
+						</c:if>
 					</a>
+					<br>
+					<c:if test="${sessionScope.user != null}">
+						<a class="logout" href="logout">Sign Out</a>
+					</c:if>
 				</div>
 			</div>
 		</div>

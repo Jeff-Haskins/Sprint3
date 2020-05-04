@@ -2,20 +2,34 @@
 
 .navbtn { 
 	color: white; 
-	background-color: #eb3135;
+	text-shadow: 1px 1px 1px #555555;
+	background-color: #e31936;
 	padding: 10px;
 	border-radius: 5px;
 	text-decoration: none;
 	transition: 0.2s;
 	white-space: nowrap;
 	display: inline-block;
+	box-shadow: 2px 2px 3px #555555;
 }
 
 .navbtn:hover {
 	text-decoration: none;
 	color: white;
-	background-color: #a12224;
+	background-color: #b5142b;
 	transition: 0.2s;
+}
+
+.search-box {
+	padding: 7px;
+	margin-bottom: 7px; 
+	border-radius: 5px;
+	width: 70%;
+	min-width: 200px;
+}
+
+.search-box:focus {
+	outline: none;
 }
 
 .dropbtn {
@@ -31,13 +45,18 @@
 }
 
 .dropdown-content {
-  display: none;
+/*   display: none; */
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 5px;
-/*   margin-top: 9px; */
+  
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  display: block;
+  text-align: left;
 }
 
 .dropdown-content a {
@@ -56,8 +75,21 @@
 .dropdown:hover .dropdown-content {
   display: block;
   text-decoration: none;
+  
+  max-height: 400px;
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #a12224;
+  background-color: #b5142b;
+}
+
+.logout {
+	text-decoration: none!important;
+	color: white;
+	text-shadow: 1px 1px 1px #555555;
+	font-size: 13px;
+}
+
+.logout:hover {
+	color: #e31936;
 }
