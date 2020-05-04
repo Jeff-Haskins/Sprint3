@@ -1,7 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@ taglib prefix="mma" uri="/WEB-INF/pawsco.tld" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +16,7 @@
 </head>
 <body>
 <%@ include file="/header.jsp"%>
-
+	
 	<div style="text-align: center">
 		<br><h3>User Registration</h3><br>
 		<div style="width: 80%; display: inline-block; text-align: center">
@@ -24,21 +24,26 @@
 			<form style="display: inline-block; text-align: left" action="register" method="post">
 					<input type="hidden" name="action" value="registerUser">        
 				<table>
-				
+					
 					<tr>      
 						<td><label for="email">Email Address</label></td>
-						<td><input type="text" name="email" value="${user.email }"></td>
-						<td><mma:ifEmptyMark field="${user.email}"/></td><br>
+						<td><input type="email" name="email" value="${user.email }" required></td>
+						<td><mma:ifEmptyMark field="${user.email}"/></td>
+					</tr>
+					<tr>      
+						<td><label for="password">Password</label></td>
+						<td><input type="text" name="password" value="${user.password }" required></td>
+						<td><mma:ifEmptyMark field="${user.password}"/></td>
 					</tr>
 					<tr>
 						<td><label for="firstName">First Name</label></td>
-						<td><input type="text" name="firstName" value="${user.firstName }"></td>
-						<td><mma:ifEmptyMark field="${user.firstName}"/></td><br>
+						<td><input type="text" name="firstName" value="${user.firstName }" required></td>
+						<td><mma:ifEmptyMark field="${user.firstName}"/></td>
 					</tr>
 					<tr>
 						<td><label for="lastName">Last Name</label></td>
-						<td><input type="text" name="lastName" value="${user.lastName }"></td>
-						<td><mma:ifEmptyMark field="${user.lastName}"/></td><br>
+						<td><input type="text" name="lastName" value="${user.lastName }" required></td>
+						<td><mma:ifEmptyMark field="${user.lastName}"/></td>
 					</tr>
 					<tr>
 						

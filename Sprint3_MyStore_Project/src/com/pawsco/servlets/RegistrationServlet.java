@@ -149,9 +149,7 @@ public class RegistrationServlet extends HttpServlet {
 			
 			
 		}
-		user.removeEmail();
-		user.removeFirstName();
-		user.removeLastName();
+		
 		String url = "/delete_cookies.jsp";
 		return url;
 	}

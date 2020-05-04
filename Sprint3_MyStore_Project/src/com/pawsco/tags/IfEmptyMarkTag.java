@@ -2,10 +2,11 @@ package com.pawsco.tags;
 
 import javax.servlet.jsp.*;
 
-
 import javax.servlet.jsp.tagext.*;
 import java.io.*;
 
+
+@SuppressWarnings("serial")
 public class IfEmptyMarkTag extends TagSupport {
 
     private String field;
@@ -23,7 +24,7 @@ public class IfEmptyMarkTag extends TagSupport {
     public int doStartTag() throws JspException {
         try {
             JspWriter out = pageContext.getOut();
-            if (field == null || field.length() == 0) {
+            if (field == null || field.length() == 0 || field == "") {
                 out.print("<font color=" + color + "> *</font>");
             }
         } catch (IOException ioe) {
