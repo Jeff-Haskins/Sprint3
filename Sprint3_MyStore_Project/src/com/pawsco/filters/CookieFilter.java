@@ -37,11 +37,12 @@ public class CookieFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
-		if (request.getAttribute("user") == null ) {
-			HttpServletRequest httpRequest = (HttpServletRequest)request;
-			HttpSession session = httpRequest.getSession();
-			
+		HttpServletRequest httpRequest = (HttpServletRequest)request;
+		HttpSession session = httpRequest.getSession();
+		
+		if (session.getAttribute("user") == null ) {
 			Cookie[] cookies = httpRequest.getCookies();
+			if (cookies != null) {
 			for (Cookie c : cookies) {
 				if (c.getName().equals("userEmail")) {
 					try {
@@ -51,6 +52,7 @@ public class CookieFilter implements Filter {
 						e.printStackTrace();
 					}
 				}
+			}
 			}
 		}
 		
