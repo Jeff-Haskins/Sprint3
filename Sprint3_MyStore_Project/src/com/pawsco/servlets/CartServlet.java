@@ -41,6 +41,9 @@ public class CartServlet extends HttpServlet {
 			System.out.println(request.getParameter("quantity"));
 			HttpSession session = request.getSession();
 			ArrayList<LineItem> items = (ArrayList<LineItem>) session.getAttribute("cart");
+			if(items == null) {
+				items = new ArrayList<LineItem>();
+			}
 			Cart cart = new Cart(items);
 			System.out.println(cart);
 			 int quantity;

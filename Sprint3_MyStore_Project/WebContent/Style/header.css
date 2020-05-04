@@ -1,5 +1,13 @@
 @charset "ISO-8859-1";
 
+.main-header-div {
+	background-color: #3071A9; 
+	text-align: center; 
+	padding: 10px; 
+	border-top: 1px solid black; 
+	border-bottom: 1px solid black;
+}
+
 .navbtn { 
 	color: white; 
 	text-shadow: 1px 1px 1px #555555;
@@ -32,6 +40,24 @@
 	outline: none;
 }
 
+.search-btn {
+	color: white;
+	background-color: #e31936;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #555555;
+	text-shadow: 1px 1px 1px #555555;
+	transition: 0.2s;
+}
+
+.search-btn:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #b5142b;
+	transition: 0.2s;
+}
+
 .dropbtn {
   border: none;
   cursor: pointer;
@@ -51,7 +77,6 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 5px;
-  
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s;
@@ -75,12 +100,12 @@
 .dropdown:hover .dropdown-content {
   display: block;
   text-decoration: none;
-  
   max-height: 400px;
 }
 
 .dropdown:hover .dropbtn {
   background-color: #b5142b;
+  box-shadow: none;
 }
 
 .logout {

@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <footer class="page-footer font-small blue-grey lighten-5">
 
-		<div style="background-color: #3071A9;">
+		<div style="background-color: #3071A9; border-bottom: 1px solid black; border-top: 1px solid black">
 			<div class="container">
 
 				<!-- Grid row-->
@@ -157,7 +157,7 @@
 
 		<!-- Copyright -->
 		<div class="footer-copyright text-center text-black-50 py-3">
-			© 2020 Copyright: <a class="dark-grey-text" href="#!">Pawsco
+			© 2020 Copyright: <a class="dark-grey-text" href="home.jsp">Pawsco
 				Wholesale Corporation</a>. All rights reserved.
 		</div>
 		<!-- Copyright -->

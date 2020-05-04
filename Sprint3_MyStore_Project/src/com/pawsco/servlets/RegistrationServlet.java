@@ -1,11 +1,13 @@
 package com.pawsco.servlets;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 
 import com.pawsco.business.User;
+import com.pawsco.data.UserDB;
 import com.pawsco.data.UserIO;
 import com.pawsco.util.CookieUtil;
 
@@ -56,7 +58,12 @@ public class RegistrationServlet extends HttpServlet {
 		// perform action and set URL to appropriate page
 		String url = "/home.jsp";
 		if (action.equals("registerUser")) {
-			url = registerUser(request, response);
+			try {
+				url = registerUser(request, response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		// forward to the view
 		
@@ -103,19 +110,21 @@ public class RegistrationServlet extends HttpServlet {
         return url;
     }
 	private String registerUser(HttpServletRequest request,
-            HttpServletResponse response) {
+            HttpServletResponse response) throws SQLException {
 
 		String url = null;
         // get the user data
        String email = request.getParameter("email");
        String firstName = request.getParameter("firstName");
        String lastName = request.getParameter("lastName");
+       String password = request.getParameter("password");
 
        // store the data in a User object
        User user = new User();
        user.setEmail(email);
        user.setFirstName(firstName);
        user.setLastName(lastName);
+       user.setPassword(password);
       
        // write the User object to a file
        ServletContext sc = getServletContext();
@@ -132,10 +141,20 @@ public class RegistrationServlet extends HttpServlet {
        c.setPath("/");    
        // allow entire app to access it
        response.addCookie(c);
-
-        url = "/home.jsp";
- 
-       return url;
+        String message;
+		//check that email address doesn't already exist
+        if (UserDB.emailExists(email)) {
+            message = "This email address already exists. <br>"
+                    + "Please enter another email address.";
+            request.setAttribute("message", message);
+            url = "/register.jsp";
+        } else {
+            UserDB.insert(user);
+            message = "";
+            request.setAttribute("message", message);
+            url = "/home.jsp";
+        }
+        return url;
    }
 	private String deleteCookies(HttpServletRequest request, HttpServletResponse response) {
 
@@ -149,9 +168,7 @@ public class RegistrationServlet extends HttpServlet {
 			
 			
 		}
-		user.removeEmail();
-		user.removeFirstName();
-		user.removeLastName();
+		
 		String url = "/delete_cookies.jsp";
 		return url;
 	}

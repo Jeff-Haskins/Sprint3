@@ -22,13 +22,14 @@
 			<div class="login-box">
 				<h5>Sign into your Pawsco.com account</h5>
 				<form action="login" method="post">
+				<input type="hidden" name="action" value="loginUser">
 					<label for="email">Email Address</label>
 					<input type="text" name="email" id="email" required>
 					<label for="password">Password</label>
 					<input type="password" name="password" id="password" required>
 					<input type="submit" value="Sign In">
 					<div style="display: inline">
-						<input type="checkbox" value="remember" id="remember">
+						<input type="checkbox" value="yes" name="remember" id="remember">
 						<label for="remember">Remember Me</label>
 					</div>
 				</form>
@@ -39,6 +40,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 
 
 
