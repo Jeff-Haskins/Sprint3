@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <footer class="page-footer font-small blue-grey lighten-5">
 
-		<div style="background-color: #3071A9;">
+		<div style="background-color: #3071A9; border-bottom: 1px solid black; border-top: 1px solid black">
 			<div class="container">
 
 				<!-- Grid row-->

@@ -32,7 +32,7 @@
 					</tr>
 					<tr>      
 						<td><label for="password">Password</label></td>
-						<td><input type="text" name="password" value="${user.password }" required></td>
+						<td><input type="password" name="password" value="${user.password }" required></td>
 						<td><mma:ifEmptyMark field="${user.password}"/></td>
 					</tr>
 					<tr>
