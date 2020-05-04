@@ -30,6 +30,11 @@
 						<td><input type="email" name="email" value="${user.email }" required></td>
 						<td><mma:ifEmptyMark field="${user.email}"/></td>
 					</tr>
+					<tr>      
+						<td><label for="password">Password</label></td>
+						<td><input type="text" name="password" value="${user.password }" required></td>
+						<td><mma:ifEmptyMark field="${user.password}"/></td>
+					</tr>
 					<tr>
 						<td><label for="firstName">First Name</label></td>
 						<td><input type="text" name="firstName" value="${user.firstName }" required></td>

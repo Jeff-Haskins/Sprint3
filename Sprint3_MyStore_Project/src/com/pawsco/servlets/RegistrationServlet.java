@@ -59,9 +59,11 @@ public class RegistrationServlet extends HttpServlet {
 			url = registerUser(request, response);
 		}
 		// forward to the view
-		getServletContext()
-			.getRequestDispatcher(url)
-			.forward(request, response);
+		
+		response.sendRedirect("home.jsp");
+//		getServletContext()
+//			.getRequestDispatcher(url)
+//			.forward(request, response);
 	}
 	
 	
@@ -147,9 +149,7 @@ public class RegistrationServlet extends HttpServlet {
 			
 			
 		}
-		user.removeEmail();
-		user.removeFirstName();
-		user.removeLastName();
+		
 		String url = "/delete_cookies.jsp";
 		return url;
 	}
