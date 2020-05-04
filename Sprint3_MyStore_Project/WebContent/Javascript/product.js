@@ -21,8 +21,9 @@ $(document).ready(function(){
 		var cardPrice = $(".price")
 		console.log(cardPrice)
 		for(var i=0; i<cardPrice.length; i++){
-			var parsedPrice = parseFloat(cardPrice[i].innerText.slice(1,6));
+			var parsedPrice = parseFloat(cardPrice[i].innerText);
 			console.log(parsedPrice)
+			console.log(parsedPrice > 5)
 			if(parsedPrice > 5) {
 				var cards=$(cardPrice[i]).parentsUntil(".col");
 				console.log(cards)
@@ -36,7 +37,7 @@ $(document).ready(function(){
 		var cardPrice = $(".price")
 		console.log(cardPrice)
 		for(var i=0; i<cardPrice.length; i++){
-			var parsedPrice = parseFloat(cardPrice[i].innerText.slice(1,6));
+			var parsedPrice = parseFloat(cardPrice[i].innerText);
 			console.log(parsedPrice)
 			if(parsedPrice >20 || parsedPrice <10) {
 					var cards=$(cardPrice[i]).parentsUntil(".col");
@@ -51,7 +52,7 @@ $(document).ready(function(){
 		var cardPrice = $(".price")
 		console.log(cardPrice)
 		for(var i=0; i<cardPrice.length; i++){
-			var parsedPrice = parseFloat(cardPrice[i].innerText.slice(1,6));
+			var parsedPrice = parseFloat(cardPrice[i].innerText);
 			console.log(parsedPrice)
 			if(parsedPrice >50 || parsedPrice <20) {
 					var cards=$(cardPrice[i]).parentsUntil(".col");
@@ -66,7 +67,7 @@ $(document).ready(function(){
 		var cardPrice = $(".price")
 		console.log(cardPrice)
 		for(var i=0; i<cardPrice.length; i++){
-			var parsedPrice = parseFloat(cardPrice[i].innerText.slice(1,6));
+			var parsedPrice = parseFloat(cardPrice[i].innerText);
 			console.log(parsedPrice)
 			if(parsedPrice >100 || parsedPrice <50) {
 					var cards=$(cardPrice[i]).parentsUntil(".col");

@@ -13,8 +13,7 @@
         <form id="searchBar"class=" form-inline my-2 my-lg-0" action="${pageContext.request.contextPath}/products.jsp">
             <input id="searchProductInput" class="form-control mr-sm-2" type="search"
                 placeholder="Search" aria-label="Search" >
-            <button id="searchButton" class="btn btn-danger" type="submit"
-                id="searchButton">Search</button>
+            <button id="searchButton" class="btn btn-danger" type="submit">Search</button>
         </form>
         
         <c:if test="${not empty cookie.userEmail}">

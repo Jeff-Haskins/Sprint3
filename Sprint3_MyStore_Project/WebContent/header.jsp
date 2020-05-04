@@ -20,14 +20,14 @@
 						</div>
 					</div>
 				</div>
-				<div style="display: table-cell; text-align: center; width: 40%">
-					<input type="text" style="
+				<div id="searchBar" style="display: table-cell; text-align: center; width: 40%">
+					<input id="searchProductInput" type="text" style="
 						padding: 7px;
 						margin-bottom: 7px; 
 						border-radius: 5px;
 						width: 70%;
 						min-width: 200px">
-					<a class="navbtn" href=""><i class="fas fa-search"></i> Search</a>
+					<a class="navbtn" href="products.jsp" id="searchButton"><i class="fas fa-search" ></i> Search</a>
 				</div>
 				<div style="display: table-cell">
 					<a class="navbtn" href=""><i class="fas fa-user"></i> Sign In/Register</a>
