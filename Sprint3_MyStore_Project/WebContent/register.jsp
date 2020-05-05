@@ -29,12 +29,12 @@
 					<label for="email">Email Address</label>
 					<input type="email" name="email"  required>
 					<label for="password">Password</label>
-					<input type="text" name="password" " required>
+					<input type="text" name="password" required>
 					<label for="firstName">First Name</label>
-					<input type="text" name="firstName"" required>
+					<input type="text" name="firstName" required>
 					<label for="lastName">Last Name</label>
-					<input type="text" name="lastName"" required>
-					<input type="submit" value="Register">
+					<input type="text" name="lastName" required>
+					<input type="submit" value="register">
 				</form>
 				<hr>
 				<p><a href="view_cookies.jsp?action=viewCookies">View all cookies</a></p>
