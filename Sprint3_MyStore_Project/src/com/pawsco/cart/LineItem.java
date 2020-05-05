@@ -10,6 +10,7 @@ public class LineItem implements Serializable {
 	private Product product;
 	private int qty;
 	
+
 	public LineItem() {
 		this.product = new Product();
 		this.qty = 0;
