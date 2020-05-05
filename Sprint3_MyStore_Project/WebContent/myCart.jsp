@@ -21,44 +21,63 @@
 <body>
 
 	<%@ include file="/header.jsp"%>
-	<h1>Your Cart:</h1>
+	<h3>Shopping Cart</h3>
 
 	<table>
 		<tr>
-			<th>Quantity</th>
-			<th style="width:5%">Image</th>
+			<th>Product</th>
 			<th>Price</th>
+			<th>Quantity</th>
 			<th>Amount</th>
-			<th></th>
+			<th>Remove Item</th>
 		</tr>
 		<c:forEach var="item" items="${sessionScope.cart}">
 			<tr>
+				<td><img style="width: 30%" class="card-img"
+					src="<c:out value='Image/${item.product.imgFile}'/>"></td>
+				<fmt:setLocale value="en_US" />
+				<td><fmt:formatNumber value="${item.product.price}"
+						type="currency" /></td>
+				<td id="quantityTd">
+					<form action="" method="post">
+						<input type="hidden" name="productid"
+							value="<c:out value='${item.product.id}'/>"> <input
+							type=text name="quantity" value="<c:out value='${item.qty}'/>"
+							id="quantity"> <input type="submit" value="Update">
+					</form>
+				</td>
+				<fmt:setLocale value="en_US" />
+				<td><fmt:formatNumber value="${item.product.price * item.qty}"
+						type="currency" /></td>
 				<td>
 					<form action="" method="post">
 						<input type="hidden" name="productid"
 							value="<c:out value='${item.product.id}'/>"> <input
-							type=text name="quantity"
-							value="<c:out value='${item.qty}'/>" id="quantity">
-						<input type="submit" value="Update">
+							type="hidden" name="quantity" value="0"> <input
+							type="submit" value="Remove Item">
 					</form>
 				</td>
-		  <td><img class="card-img" src="<c:out value='Image/${item.product.imgFile}'/>"> </td>
-    <fmt:setLocale value = "en_US"/>
-    <td><fmt:formatNumber value ="${item.product.price}" type="currency"/></td>
-    <fmt:setLocale value = "en_US"/>
-    <td><fmt:formatNumber value ="${item.product.price * item.qty}" type="currency"/></td>
-    <td>
-      <form action="" method="post">
-        <input type="hidden" name="productCode" 
-               value="<c:out value='${item.product.id}'/>">
-        <input type="hidden" name="quantity" 
-               value="0">
-        <input type="submit" value="Remove Item">
-      </form>
-    </td>
-  </tr>
-</c:forEach>
-</table>
+			</tr>
+		</c:forEach>
+		<td>
+			<form action="" method="post">
+				<input type="hidden" name="action" value="shop"> <input
+					type="submit" value="Continue Shopping">
+			</form>
+		</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>
+		<form action="" method="post">
+			<input type="hidden" name="action" value="checkout"> <input
+				type="submit" value="Checkout">
+		</form>
+		</td>
+	</table>
+	<br><br>
+
+
 	<%@ include file="/footer.jsp"%>
 
 	<script src="../Javascript/home.js"></script>
