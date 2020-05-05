@@ -27,7 +27,7 @@
 					<input type="text" name="email" id="email" required>
 					<label for="password">Password</label>
 					<input type="password" name="password" id="password" required>
-					<input type="submit" value="Sign In">
+					<input type="submit" value="login">
 					<div style="display: inline">
 						<input type="checkbox" value="yes" name="remember" id="remember">
 						<label for="remember">Remember Me</label>
