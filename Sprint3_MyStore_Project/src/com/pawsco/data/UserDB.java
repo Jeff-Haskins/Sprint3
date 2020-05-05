@@ -29,17 +29,10 @@ public class UserDB {
 			
 			ps.executeUpdate();
 			
-			//get the user ID from the last insert statement
-			String identityQuery = "SELECT @@IDENTITY AS IDENTITY";
+			//get the user ID from the last insert statement		
 			Statement identityStatement = connection.createStatement();
-			ResultSet identityResultSet = identityStatement.executeQuery(identityQuery);
-			identityResultSet.next();
-			long userID = identityResultSet.getLong("IDENTITY");
-			identityResultSet.close();
 			identityStatement.close();
-			
-			// Set the user ID in the user object
-			user.setId(userID);
+	
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 				System.err.println(e);
