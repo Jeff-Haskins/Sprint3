@@ -21,6 +21,7 @@
 		<div style="width: 80%; display: inline-block">
 			<div class="login-box">
 				<h5>Sign into your Pawsco.com account</h5>
+				<p id="login-error-msg" style="color: red; text-align: center;">Invalid email or password!</p>
 				<form action="login" method="post">
 				<input type="hidden" name="action" value="loginUser">
 					<label for="email">Email Address</label>
@@ -41,28 +42,6 @@
 		</div>
 	</div>
 	
-	
-
-
-
-<!-- <form action="emailList" method="post"> -->
-<!--         <input type="hidden" name="action" value="add">         -->
-
-<!--         <label class="pad_top">Email:</label> -->
-<%--         <input type="email" name="email" value="${user.email}"> --%>
-<%--         <mma:ifEmptyMark field="${user.email}"/><br> --%>
-
-<!--         <label class="pad_top">First Name:</label> -->
-<%--         <input type="text" name="firstName" value="${user.firstName}"> --%>
-<%--         <mma:ifEmptyMark field="${user.firstName}"/><br> --%>
-
-<!--         <label class="pad_top">Last Name:</label> -->
-<%--         <input type="text" name="lastName" value="${user.lastName}"> --%>
-<%--         <mma:ifEmptyMark field="${user.lastName}"/><br>         --%>
-
-<!--         <label>&nbsp;</label> -->
-<!--         <input type="submit" value="Sign In" class="margin_left"> -->
-<!--     </form> -->
     <%@ include file="/footer.jsp"%>
     <script src="../Javascript/home.js"></script>
 </body>

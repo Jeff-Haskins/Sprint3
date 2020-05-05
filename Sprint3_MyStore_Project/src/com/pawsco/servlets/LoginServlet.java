@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 import com.pawsco.business.User;
 import com.pawsco.data.UserDB;
@@ -67,23 +68,46 @@ public class LoginServlet extends HttpServlet {
 		
 		String action = request.getParameter("action");
 
-		// perform action and set URL to appropriate page
-		String url = "/home.jsp";
-		if (action.equals("loginUser")) {
-			try {
-				url = loginUser(request, response);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		String email = request.getParameter("email");
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String password = request.getParameter("password");
+
+		try {
+			if (UserDB.userExists(email, password)) {
+
+				response.sendRedirect("home.jsp");
+				// perform action and set URL to appropriate page
+				String url = "/home.jsp";
+				if (action.equals("loginUser")) {
+					try {
+						url = loginUser(request, response);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+				}
+			} else {
+				
+				response.sendRedirect("invalidLogin.jsp");
 			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		
 		// forward to the view
 		
-		response.sendRedirect("home.jsp");
-//		getServletContext()
-//			.getRequestDispatcher(url)
-//			.forward(request, response);
+				//response.sendRedirect("home.jsp");
+//				getServletContext()
+//					.getRequestDispatcher(url)
+//					.forward(request, response);
 	}
+
 	private String checkUser(HttpServletRequest request,
             HttpServletResponse response) {
 
